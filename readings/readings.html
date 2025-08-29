@@ -111,7 +111,7 @@
     .book-cover {
       width: 100%;
       height: 300px;
-      object-fit: cover;
+      object-fit: contain;
       background: #ffffff;
       border: 1px solid #e9ecef;
     }
@@ -408,6 +408,96 @@
       // Replace the image with the placeholder
       img.parentNode.replaceChild(placeholder, img);
     }
+
+    // Function to check if URL is a known placeholder/not available image
+    function checkIfPlaceholderUrl(url) {
+      if (!url || url.trim() === '') {
+        return true;
+      }
+
+      const urlLower = url.toLowerCase();
+
+      // Generic placeholder image filenames
+      const knownPlaceholderFiles = [
+        '1.jpg',
+        '2.jpg',
+        '3.jpg',
+        '4.jpg',
+        '5.jpg',
+        'nophoto.jpg',
+        'nophoto.png',
+        'default.jpg',
+        'default.png',
+        'placeholder.jpg',
+        'placeholder.png',
+        'missing.jpg',
+        'missing.png',
+        'unavailable.jpg',
+        'unavailable.png'
+      ];
+
+      // Check if the filename (last part of URL) matches known placeholders
+      const filename = url.split('/').pop().toLowerCase();
+      if (knownPlaceholderFiles.includes(filename)) {
+        return true;
+      }
+
+      // Common placeholder image indicators
+      const placeholderKeywords = [
+        'not-available',
+        'no-image',
+        'placeholder',
+        'missing',
+        'default',
+        'unavailable',
+        'nophoto',
+        'no_image',
+        'image_not_available',
+        'book-placeholder',
+        'cover-placeholder',
+        'no-cover',
+        'nocover',
+        'blank',
+        'empty',
+        'goodreads.com/assets/nophoto',
+        'goodreads.com/books/nophoto',
+        'nophoto/book',
+        'nophoto/user',
+        'assets/nophoto'
+      ];
+
+      // Check if URL contains any placeholder keywords
+      for (let keyword of placeholderKeywords) {
+        if (urlLower.includes(keyword)) {
+          return true;
+        }
+      }
+
+      // Check for common placeholder image services
+      const placeholderServices = [
+        'via.placeholder.com',
+        'placeholder.com',
+        'placehold.it',
+        'dummyimage.com',
+        'picsum.photos',
+        'lorempixel.com'
+      ];
+
+      for (let service of placeholderServices) {
+        if (urlLower.includes(service)) {
+          return true;
+        }
+      }
+
+      // Check for very small images (likely 1x1 tracking pixels or tiny placeholders)
+      if (urlLower.includes('1x1') || urlLower.includes('pixel')) {
+        return true;
+      }
+
+      return false;
+    }
+
+
 
     // Robust CSV parsing function for Goodreads format
     function parseCSV(csvText) {
@@ -767,14 +857,24 @@
       const div = document.createElement('div');
       div.className = `col-lg-3 col-md-4 col-sm-6 portfolio-item year-${book.readYear}`;
 
-      // Handle image errors by replacing with blank placeholder
-      const onErrorHandler = `replaceWithPlaceholder(this)`;
+      // Check if the image URL indicates it's a placeholder/not available image
+      const isPlaceholderImage = checkIfPlaceholderUrl(book.cover);
+
+      let imageContent;
+      if (isPlaceholderImage) {
+        // Use blank placeholder directly
+        imageContent = `<div class="book-cover-placeholder" aria-label="Book cover not available"></div>`;
+      } else {
+        // Use actual image with error handling
+        const onErrorHandler = `replaceWithPlaceholder(this)`;
+        imageContent = `<img src="${book.cover}" alt="${book.title}" class="book-cover"
+                             onerror="${onErrorHandler}"
+                             loading="lazy">`;
+      }
 
       // Create the book card content
       const bookCardContent = `
-        <img src="${book.cover}" alt="${book.title}" class="book-cover"
-             onerror="${onErrorHandler}"
-             loading="lazy">
+        ${imageContent}
         <div class="book-info">
           <div class="book-year">${book.readYear}</div>
           <h3 class="book-title">${book.title}</h3>
