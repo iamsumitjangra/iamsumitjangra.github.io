@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Sumit Kumar</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="../assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="../assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+
+  <style>
+    /* Standard card styling for entire website */
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
+      margin-bottom: 30px;
+      height: 450px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 270px;
+      object-fit: contain;
+      object-position: center;
+      background: #f8f9fa;
+      transition: transform 0.3s ease;
+      border-radius: 10px 10px 0 0;
+      flex-shrink: 0;
+    }
+
+    .card:hover img {
+      transform: scale(1.05);
+    }
+
+    .card {
+      cursor: pointer;
+    }
+
+    /* Full-screen image viewer styles */
+    .fullscreen-viewer {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.95);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .fullscreen-viewer.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    .fullscreen-content {
+      position: relative;
+      max-width: 90%;
+      max-height: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .fullscreen-image {
+      max-width: 100%;
+      max-height: 80vh;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .fullscreen-info {
+      color: white;
+      text-align: center;
+      margin-top: 20px;
+      max-width: 600px;
+    }
+
+    .fullscreen-title {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .fullscreen-description {
+      font-size: 16px;
+      opacity: 0.9;
+      line-height: 1.5;
+    }
+
+    .fullscreen-meta {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 15px;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 10000;
+      transition: opacity 0.3s ease;
+    }
+
+    .close-btn:hover {
+      opacity: 0.7;
+    }
+
+    .nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+      font-size: 30px;
+      cursor: pointer;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      transition: background 0.3s ease;
+      user-select: none;
+    }
+
+    .nav-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .prev-btn {
+      left: 30px;
+    }
+
+    .next-btn {
+      right: 30px;
+    }
+
+    /* Mobile responsive adjustments */
+    @media (max-width: 768px) {
+      .fullscreen-content {
+        max-width: 95%;
+        max-height: 95%;
+      }
+
+      .fullscreen-image {
+        max-height: 70vh;
+      }
+
+      .fullscreen-title {
+        font-size: 20px;
+      }
+
+      .fullscreen-description {
+        font-size: 14px;
+      }
+
+      .close-btn {
+        top: 10px;
+        right: 15px;
+        font-size: 30px;
+      }
+
+      .nav-btn {
+        font-size: 24px;
+        padding: 8px;
+      }
+
+      .prev-btn {
+        left: 15px;
+      }
+
+      .next-btn {
+        right: 15px;
+      }
+    }
+
+    .card-info {
+      padding: 18px;
+      height: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-shrink: 0;
+    }
+
+    .card-info h4 {
+      color: #173b6c;
+      margin-bottom: 8px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 1.3;
+      height: 42px;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+
+    .card-info p {
+      color: #666;
+      font-size: 13px;
+      margin-bottom: 12px;
+      line-height: 1.4;
+      height: 75px;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      flex-grow: 1;
+    }
+
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: #999;
+      height: 28px;
+      flex-shrink: 0;
+      margin-top: auto;
+    }
+
+    .card-category {
+      background: #149ddd;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 15px;
+      font-size: 11px;
+      font-weight: 500;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      color: #173b6c;
+    }
+
+    .section-title p {
+      color: #666;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .card {
+        height: 400px;
+      }
+
+      .card img {
+        height: 240px;
+      }
+
+      .card-info {
+        padding: 15px;
+        height: 160px;
+      }
+
+      .card-info h4 {
+        font-size: 15px;
+        height: 38px;
+      }
+
+      .card-info p {
+        font-size: 12px;
+        height: 65px;
+        -webkit-line-clamp: 3;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .card {
+        height: 380px;
+      }
+
+      .card img {
+        height: 220px;
+      }
+
+      .card-info {
+        padding: 12px;
+        height: 160px;
+      }
+
+      .card-info h4 {
+        font-size: 14px;
+        height: 36px;
+      }
+
+      .card-info p {
+        font-size: 11px;
+        height: 60px;
+        -webkit-line-clamp: 3;
+      }
+
+      .card-meta {
+        font-size: 11px;
+        height: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="../assets/img/profile-img.png" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="../index.html">Sumit Kumar</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="https://x.com/raas_aal_ghul" target="_blank" class="twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <!-- <a href="https://www.facebook.com/isumitjangra" class="facebook"><i class="bx bxl-facebook"></i></a> -->
+          <a href="https://www.linkedin.com/in/iamsumitjangra" class="linkedin"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/raas.al.ghul/" target="_blank" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="../index.html"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="../travel-blogs/travel-blogs.html"><i class="bx bx-map"></i> <span>Travel Blogs</span></a></li>
+          <li class="active"><a href="paintings.html"><i class="bx bx-palette"></i> <span>Paintings</span></a></li>
+          <li><a href="../readings/readings.html"><i class="bx bx-book-open"></i> <span>Readings</span></a></li>
+          <li><a href="../projects/projects.html"><i class="bx bx-briefcase"></i> <span>Projects</span></a></li>
+          <li><a href="../resources/resources.html"><i class="bx bx-book"></i> Resources</a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+      <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <main id="main">
+
+     <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2><strong>Paintings</strong></h2>
+          <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li>Paintings</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Paintings Section ======= -->
+    <section id="paintings" class="portfolio">
+      <div class="container">
+
+        <div class="section-title">
+          <!-- <h2>My Paintings</h2> -->
+          <p>"Art is not what you see, but what you make others see."</p>
+          <p style="font-style: italic; font-weight: bold;">Edgar Degas</p>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All (20)</li>
+              <li data-filter=".filter-charcoal">Charcoal (13)</li>
+              <li data-filter=".filter-oil">Oil (3)</li>
+              <li data-filter=".filter-wall">Wall (2)</li>
+              <li data-filter=".filter-stencil">Stencil (1)</li>
+              <li data-filter=".filter-knife">Knife (1)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+
+          <!-- Titanic Locket (Charcoal Drawing) -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-charcoal filter-2023">
+            <div class="card">
+              <img src="img-paintings/44552ce2b26f3ed660e7af779296c488.jpg" alt="Titanic Locket Charcoal Drawing" loading="lazy">
+              <div class="card-info">
+                <h4>Titanic Locket</h4>
+                <p>Detailed charcoal drawing inspired by the iconic locket from the movie Titanic.</p>
+                <div class="card-meta">
+                  <span class="card-category">Charcoal</span>
+                  <span>2023</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ford Mustang -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-charcoal filter-2023">
+            <div class="card">
+              <img src="img-paintings/969fe9403f97b0f12f2d67ae2bc8120c.jpg" alt="Ford Mustang Drawing" loading="lazy">
+              <div class="card-info">
+                <h4>Ford Mustang</h4>
+                <p>Classic car drawing with racing stripes showcasing automotive design and precision.</p>
+                <div class="card-meta">
+                  <span class="card-category">Charcoal</span>
+                  <span>2023</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Joker (Stencil Art) -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-stencil filter-2022">
+            <div class="card">
+              <img src="img-paintings/5215cda5b745bc05c5dd783ea1c5814c.jpg" alt="Joker Stencil Art" loading="lazy">
+              <div class="card-info">
+                <h4>Joker</h4>
+                <p>Black and white stencil artwork capturing the iconic villain's menacing expression.</p>
+                <div class="card-meta">
+                  <span class="card-category">Stencil</span>
+                  <span>2022</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ballerina Oil Painting -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-oil filter-2022">
+            <div class="card">
+              <img src="img-paintings/c97ba6af2e925d23ebcdd22e41244324.jpg" alt="Ballerina Oil Painting" loading="lazy">
+              <div class="card-info">
+                <h4>Ballerina Oil Painting</h4>
+                <p>2'x3' canvas oil painting of a graceful ballerina in white with dramatic lighting.</p>
+                <div class="card-meta">
+                  <span class="card-category">Oil</span>
+                  <span>2022</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Snow White - First Oil Painting -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-oil filter-2021">
+            <div class="card">
+              <img src="img-paintings/32aa3c513b00ce222211782e654ba131.jpg" alt="Snow White Oil Painting" loading="lazy">
+              <div class="card-info">
+                <h4>Snow White</h4>
+                <p>First ever oil painting featuring the beloved Disney princess in classic style.</p>
+                <div class="card-meta">
+                  <span class="card-category">Oil</span>
+                  <span>2021</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- A Calm Tiger -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-charcoal filter-2022">
+            <div class="card">
+              <img src="img-paintings/18c6863b5d5d9babf3c41879bd6fd3c5.jpg" alt="Calm Tiger Drawing" loading="lazy">
+              <div class="card-info">
+                <h4>A Calm Tiger</h4>
+                <p>Pencil drawing of a serene tiger face with intricate detail and shading.</p>
+                <div class="card-meta">
+                  <span class="card-category">Charcoal</span>
+                  <span>2022</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Portrait Study -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-charcoal filter-2022">
+            <div class="card">
+              <img src="img-paintings/494d9adc4e779d627954279cf3277605.jpg" alt="Portrait Study" loading="lazy">
+              <div class="card-info">
+                <h4>Portrait Study</h4>
+                <p>Realistic portrait painting focusing on light, shadow, and human expression.</p>
+                <div class="card-meta">
+                  <span class="card-category">Charcoal</span>
+                  <span>2022</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Abstract Composition -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-wall filter-2023">
+            <div class="card">
+              <img src="img-paintings/4dd009f6651ec077cac8996f3fdb7c3e.jpg" alt="Abstract Composition" loading="lazy">
+              <div class="card-info">
+                <h4>Roaring Tiger</h4>
+                <p>Powerful wall art depicting a fierce roaring tiger with dramatic expression and bold strokes.</p>
+                <div class="card-meta">
+                  <span class="card-category">Wall</span>
+                  <span>2023</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Landscape Watercolor -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-charcoal filter-2023">
+            <div class="card">
+              <img src="img-paintings/58f61c2cce69f7c0fe64a01d0697feef.jpg" alt="Landscape Watercolor" loading="lazy">
+              <div class="card-info">
+                <h4>White Widow</h4>
+                <p>Detailed charcoal portrait of a mysterious woman in white, capturing elegance and grace.</p>
+                <div class="card-meta">
+                  <span class="card-category">Charcoal</span>
+                  <span>2023</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Character Study -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-charcoal filter-2023">
+            <div class="card">
+              <img src="img-paintings/5f21b7c414180514c70e74f08359b357.jpg" alt="Character Study" loading="lazy">
+              <div class="card-info">
+                <h4>Justice League</h4>
+                <p>Dynamic charcoal artwork featuring iconic Justice League superheroes in action poses.</p>
+                <div class="card-meta">
+                  <span class="card-category">Charcoal</span>
+                  <span>2023</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Still Life Study -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-wall filter-2022">
+            <div class="card">
+              <img src="img-paintings/6f27ffca2bb2dd0ec9d51b1ccdb4f0f7.jpg" alt="Still Life Study" loading="lazy">
+              <div class="card-info">
+                <h4>Bob Marley</h4>
+                <p>Vibrant wall portrait of the legendary reggae musician Bob Marley with his iconic dreadlocks.</p>
+                <div class="card-meta">
+                  <span class="card-category">Wall</span>
+                  <span>2022</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Urban Sketch -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-charcoal filter-2023">
+            <div class="card">
+              <img src="img-paintings/74a9f74b4aba81b3ba4c04cc1876b76f.jpg" alt="Urban Sketch" loading="lazy">
+              <div class="card-info">
+                <h4>The Eye</h4>
+                <p>Highly detailed charcoal drawing of a human eye with intricate shading and realistic textures.</p>
+                <div class="card-meta">
+                  <span class="card-category">Charcoal</span>
+                  <span>2023</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nature Study -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-charcoal filter-2022">
+            <div class="card">
+              <img src="img-paintings/783f88b1345349b0786f8ffb1fe2a1f1.jpg" alt="Nature Study" loading="lazy">
+              <div class="card-info">
+                <h4>Iron Man</h4>
+                <p>Detailed charcoal portrait of the iconic Marvel superhero Iron Man in his armored suit.</p>
+                <div class="card-meta">
+                  <span class="card-category">Charcoal</span>
+                  <span>2022</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Figure Drawing -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-charcoal filter-2022">
+            <div class="card">
+              <img src="img-paintings/78baaf1b91c3c8f6d4513ac20ccd200f.jpg" alt="Figure Drawing" loading="lazy">
+              <div class="card-info">
+                <h4>The Lady</h4>
+                <p>Elegant charcoal portrait of a woman with graceful features and sophisticated styling.</p>
+                <div class="card-meta">
+                  <span class="card-category">Charcoal</span>
+                  <span>2022</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Color Experiment -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-charcoal filter-2023">
+            <div class="card">
+              <img src="img-paintings/85242f9d32f50d27b79cecc8e388a48d.jpg" alt="Color Experiment" loading="lazy">
+              <div class="card-info">
+                <h4>Punisher</h4>
+                <p>Dark and intense charcoal artwork of the Marvel anti-hero Punisher with his iconic skull symbol.</p>
+                <div class="card-meta">
+                  <span class="card-category">Charcoal</span>
+                  <span>2023</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Animal Portrait -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-charcoal filter-2022">
+            <div class="card">
+              <img src="img-paintings/8a2f2d64e89af6084fe102c6966a40ab.jpg" alt="Animal Portrait" loading="lazy">
+              <div class="card-info">
+                <h4>Paris Voyage</h4>
+                <p>Romantic charcoal sketch inspired by the beauty and architecture of Paris, France.</p>
+                <div class="card-meta">
+                  <span class="card-category">Charcoal</span>
+                  <span>2022</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mixed Media Experiment -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-knife filter-2023">
+            <div class="card">
+              <img src="img-paintings/a105813a46635b1c466514e707a05b99.jpg" alt="Mixed Media Experiment" loading="lazy">
+              <div class="card-info">
+                <h4>The Rocking Lady</h4>
+                <p>Expressive knife painting of a woman in motion, created with bold palette knife strokes.</p>
+                <div class="card-meta">
+                  <span class="card-category">Knife</span>
+                  <span>2023</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Portrait Series Study -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-charcoal filter-2023">
+            <div class="card">
+              <img src="img-paintings/c7fe3f6faa90f7751c2751b96a822935.jpg" alt="Portrait Series Study" loading="lazy">
+              <div class="card-info">
+                <h4>Mystic House</h4>
+                <p>Atmospheric charcoal drawing of a mysterious house with dramatic shadows and lighting.</p>
+                <div class="card-meta">
+                  <span class="card-category">Charcoal</span>
+                  <span>2023</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contemporary Art Piece -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-charcoal filter-2023">
+            <div class="card">
+              <img src="img-paintings/c9c7664b0d18df4634b345b95bc00881.jpg" alt="Contemporary Art Piece" loading="lazy">
+              <div class="card-info">
+                <h4>Thinking Lady</h4>
+                <p>Contemplative charcoal portrait of a woman deep in thought, capturing introspective emotion.</p>
+                <div class="card-meta">
+                  <span class="card-category">Charcoal</span>
+                  <span>2023</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sketch Collection -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-oil filter-2022">
+            <div class="card">
+              <img src="img-paintings/dbc15cde0892f96efe2c300e4035cf7c.jpg" alt="Sketch Collection" loading="lazy">
+              <div class="card-info">
+                <h4>The Thinking Boy</h4>
+                <p>Thoughtful oil painting of a young boy in contemplation, rendered with soft brushstrokes.</p>
+                <div class="card-meta">
+                  <span class="card-category">Oil</span>
+                  <span>2022</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Paintings Section -->
+
+  </main><!-- End #main -->
+
+  <!-- Full-screen Image Viewer -->
+  <div id="fullscreen-viewer" class="fullscreen-viewer">
+    <span class="close-btn" id="close-viewer">&times;</span>
+    <span class="nav-btn prev-btn" id="prev-image">&#8249;</span>
+    <span class="nav-btn next-btn" id="next-image">&#8250;</span>
+    <div class="fullscreen-content">
+      <img id="fullscreen-image" class="fullscreen-image" src="" alt="">
+      <div class="fullscreen-info">
+        <div class="fullscreen-title" id="fullscreen-title"></div>
+        <div class="fullscreen-description" id="fullscreen-description"></div>
+        <div class="fullscreen-meta">
+          <span id="fullscreen-category"></span>
+          <span id="fullscreen-year"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Sumit Kumar</span></strong>
+      </div>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/jquery/jquery.min.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+  <script src="../assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="../assets/vendor/counterup/counterup.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/venobox/venobox.min.js"></script>
+  <script src="../assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="../assets/vendor/typed.js/typed.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+
+  <!-- Initialize portfolio filtering for static content -->
+  <script>
+    // Initialize Isotope filtering for static paintings
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize Isotope
+      if (typeof $.fn.isotope !== 'undefined') {
+        var $container = $('.portfolio-container');
+
+        // Initialize isotope
+        $container.isotope({
+          itemSelector: '.portfolio-item',
+          layoutMode: 'fitRows'
+        });
+
+        // Filter items on button click
+        $('#portfolio-flters li').on('click', function() {
+          $('#portfolio-flters li').removeClass('filter-active');
+          $(this).addClass('filter-active');
+
+          var filterValue = $(this).attr('data-filter');
+          $container.isotope({ filter: filterValue });
+        });
+      }
+
+      // Initialize full-screen image viewer
+      initializeFullscreenViewer();
+    });
+
+    // Full-screen image viewer functionality
+    function initializeFullscreenViewer() {
+      const viewer = document.getElementById('fullscreen-viewer');
+      const fullscreenImage = document.getElementById('fullscreen-image');
+      const fullscreenTitle = document.getElementById('fullscreen-title');
+      const fullscreenDescription = document.getElementById('fullscreen-description');
+      const fullscreenCategory = document.getElementById('fullscreen-category');
+      const fullscreenYear = document.getElementById('fullscreen-year');
+      const closeBtn = document.getElementById('close-viewer');
+      const prevBtn = document.getElementById('prev-image');
+      const nextBtn = document.getElementById('next-image');
+
+      let currentImageIndex = 0;
+      let paintingsData = [];
+
+      // Collect all painting data
+      function collectPaintingsData() {
+        const paintingCards = document.querySelectorAll('.card');
+        paintingsData = Array.from(paintingCards).map(card => {
+          const img = card.querySelector('img');
+          const title = card.querySelector('h4').textContent;
+          const description = card.querySelector('p').textContent;
+          const category = card.querySelector('.card-category').textContent;
+          const year = card.querySelector('.card-meta span:last-child').textContent;
+
+          return {
+            src: img.src,
+            alt: img.alt,
+            title: title,
+            description: description,
+            category: category,
+            year: year
+          };
+        });
+      }
+
+      // Show image in full-screen
+      function showFullscreen(index) {
+        if (index < 0 || index >= paintingsData.length) return;
+
+        currentImageIndex = index;
+        const painting = paintingsData[index];
+
+        fullscreenImage.src = painting.src;
+        fullscreenImage.alt = painting.alt;
+        fullscreenTitle.textContent = painting.title;
+        fullscreenDescription.textContent = painting.description;
+        fullscreenCategory.textContent = painting.category;
+        fullscreenYear.textContent = painting.year;
+
+        viewer.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+      }
+
+      // Hide full-screen viewer
+      function hideFullscreen() {
+        viewer.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scrolling
+      }
+
+      // Navigate to previous image
+      function showPrevious() {
+        const newIndex = currentImageIndex > 0 ? currentImageIndex - 1 : paintingsData.length - 1;
+        showFullscreen(newIndex);
+      }
+
+      // Navigate to next image
+      function showNext() {
+        const newIndex = currentImageIndex < paintingsData.length - 1 ? currentImageIndex + 1 : 0;
+        showFullscreen(newIndex);
+      }
+
+      // Initialize event listeners
+      function initializeEventListeners() {
+        // Collect paintings data
+        collectPaintingsData();
+
+        // Add click listeners to all painting cards
+        const paintingCards = document.querySelectorAll('.card');
+        paintingCards.forEach((card, index) => {
+          card.addEventListener('click', () => showFullscreen(index));
+        });
+
+        // Close button
+        closeBtn.addEventListener('click', hideFullscreen);
+
+        // Navigation buttons
+        prevBtn.addEventListener('click', showPrevious);
+        nextBtn.addEventListener('click', showNext);
+
+        // Click outside image to close
+        viewer.addEventListener('click', (e) => {
+          if (e.target === viewer) {
+            hideFullscreen();
+          }
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+          if (!viewer.classList.contains('active')) return;
+
+          switch(e.key) {
+            case 'Escape':
+              hideFullscreen();
+              break;
+            case 'ArrowLeft':
+              showPrevious();
+              break;
+            case 'ArrowRight':
+              showNext();
+              break;
+          }
+        });
+      }
+
+      // Initialize everything
+      initializeEventListeners();
+    }
+  </script>
+
+</body>
+
+</html>

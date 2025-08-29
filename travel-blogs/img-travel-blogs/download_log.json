@@ -1,0 +1,84 @@
+{
+  "downloaded": {
+    "Leh Ladakh": {
+      "filename": "leh-ladakh.jpg",
+      "url": "https://iamsumitjangra.wordpress.com/wp-content/uploads/2020/12/8bfb1-img_0162.jpg",
+      "blog_url": "https://iamsumitjangra.wordpress.com/2017/06/11/leh-ladakh-20-may-04-june/",
+      "timestamp": 1756445177.9812858
+    },
+    "Paris Barcelona": {
+      "filename": "paris-barcelona.jpg",
+      "url": "https://iamsumitjangra.wordpress.com/wp-content/uploads/2020/12/552ef-dsc06927.jpg?w=1024&h=768",
+      "blog_url": "https://iamsumitjangra.wordpress.com/2015/09/19/paris-barcelona-trip-10-sep-13-sep/",
+      "timestamp": 1756445187.7507021
+    },
+    "Belgium": {
+      "filename": "belgium.jpg",
+      "url": "https://iamsumitjangra.wordpress.com/wp-content/uploads/2020/12/463ed-img_20150905_120236.jpg?w=1024&h=768",
+      "blog_url": "https://iamsumitjangra.wordpress.com/2015/09/19/belgium-trip-5-6-sep/",
+      "timestamp": 1756445189.828141
+    },
+    "Douai": {
+      "filename": "douai.jpg",
+      "url": "https://iamsumitjangra.wordpress.com/wp-content/uploads/2020/12/0d79a-dsc_0020.jpg?w=576&h=1024",
+      "blog_url": "https://iamsumitjangra.wordpress.com/2015/09/25/visiting-douai-20-sep/",
+      "timestamp": 1756445191.769274
+    },
+    "Professor House": {
+      "filename": "professor-house.jpg",
+      "url": "https://iamsumitjangra.wordpress.com/wp-content/uploads/2020/12/0db3c-wpid-img_20150919_220132.jpg",
+      "blog_url": "https://iamsumitjangra.wordpress.com/2015/09/25/dinner-at-professors-house-19-sep/",
+      "timestamp": 1756445194.3057191
+    },
+    "Hostel Party": {
+      "filename": "hostel-party.jpg",
+      "url": "https://iamsumitjangra.wordpress.com/wp-content/uploads/2020/12/49350-img_20150902_221749.jpg?w=1024&h=768",
+      "blog_url": "https://iamsumitjangra.wordpress.com/2015/09/19/party-in-hostel-1-sep/",
+      "timestamp": 1756445196.270599
+    },
+    "First Day College": {
+      "filename": "first-day-college.jpg",
+      "url": "https://iamsumitjangra.wordpress.com/wp-content/uploads/2020/12/3b2de-dsc_0155.jpg?w=1024&h=576",
+      "blog_url": "https://iamsumitjangra.wordpress.com/2015/09/19/first-class-at-college-31-aug/",
+      "timestamp": 1756445198.7058911
+    },
+    "First Day Douai": {
+      "filename": "first-day-douai.jpg",
+      "url": "https://iamsumitjangra.wordpress.com/wp-content/uploads/2020/12/e5332-breakfast.jpg?w=775&h=1024",
+      "blog_url": "https://iamsumitjangra.wordpress.com/2015/09/19/first-day-in-douai-27-aug/",
+      "timestamp": 1756445201.454773
+    },
+    "Journey France": {
+      "filename": "journey-france.jpg",
+      "url": "https://iamsumitjangra.wordpress.com/wp-content/uploads/2020/12/3bdd2-img_20150826_093009.jpg?w=759&h=1024",
+      "blog_url": "https://iamsumitjangra.wordpress.com/2015/08/27/india-france-26-aug-2/",
+      "timestamp": 1756445203.808706
+    },
+    "Kasol": {
+      "filename": "kasol.jpeg",
+      "url": "https://iamsumitjangra.wordpress.com/wp-content/uploads/2020/12/6b2d8-img_2707.jpeg?w=3264&h=2448",
+      "blog_url": "https://iamsumitjangra.wordpress.com/2016/12/20/its-kasol-13-dec-15-dec/",
+      "timestamp": 1756445954.057962
+    },
+    "Swiss and Italy": {
+      "filename": "swiss-and-italy.jpg",
+      "url": "https://iamsumitjangra.wordpress.com/wp-content/uploads/2020/12/6bd6e-img_4098.jpg?w=3264&h=2448",
+      "blog_url": "https://iamsumitjangra.wordpress.com/2015/11/13/swiss-and-italy-23-oct-1-nov/",
+      "timestamp": 1756445957.097863
+    }
+  },
+  "failed": {
+    "Kasol": "All image downloads failed",
+    "Nandi Hills": "No images found",
+    "Swiss and Italy": "All image downloads failed",
+    "Amsterdam": "No images found",
+    "Chinese Students": "No images found",
+    "Lille": "No images found"
+  },
+  "stats": {
+    "total": 4,
+    "success": 0,
+    "failed": 4,
+    "last_run": 1756447621.890084
+  }
+}

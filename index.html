@@ -20,12 +20,43 @@
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Custom Navigation Font Styling -->
+  <style>
+    /* Enhanced Navigation Menu Typography - Inspired by Proxima Nova style */
+    .nav-menu a {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+      font-weight: 500 !important;
+      font-size: 15px !important;
+      letter-spacing: 0.3px !important;
+      text-transform: none !important;
+    }
+
+    .nav-menu a span {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+      font-weight: 500 !important;
+      letter-spacing: 0.3px !important;
+    }
+
+    /* Active menu item styling */
+    .nav-menu .active a,
+    .nav-menu .active a span {
+      font-weight: 600 !important;
+    }
+
+    /* Hover effect enhancement */
+    .nav-menu a:hover span {
+      font-weight: 600 !important;
+      transition: font-weight 0.2s ease;
+    }
+  </style>
 
   <!-- =======================================================
   * Template Name: iPortfolio - v1.3.0
@@ -38,41 +69,46 @@
 <body>
 
   <!-- ======= Mobile nav toggle button ======= -->
-  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+<i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
-  <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="d-flex flex-column">
+<!-- ======= Header ======= -->
+<header id="header">
+  <div class="d-flex flex-column">
 
-      <div class="profile">
-        <img src="assets/img/profile-img.png" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">Sumit Kumar</a></h1>
-        <div class="social-links mt-3 text-center">
-          <a href="https://twitter.com/iamsumitjangra" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <!-- <a href="https://www.facebook.com/isumitjangra" class="facebook"><i class="bx bxl-facebook"></i></a> -->
-          <a href="https://www.instagram.com/iamsumitjangra" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="https://www.linkedin.com/in/iamsumitjangra" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-        </div>
+    <div class="profile">
+      <img src="assets/img/profile-img.png" alt="" class="img-fluid rounded-circle">
+      <h1 class="text-light"><a href="index.html">Sumit Kumar</a></h1>
+      <div class="social-links mt-3 text-center">
+        <a href="https://x.com/raas_aal_ghul" target="_blank" class="twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <!-- <a href="https://www.facebook.com/isumitjangra" class="facebook"><i class="bx bxl-facebook"></i></a> -->
+        <a href="https://www.linkedin.com/in/iamsumitjangra" class="linkedin"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/raas.al.ghul/" target="_blank" class="instagram"><i class="fa-brands fa-instagram"></i></a>
       </div>
-
-      <nav class="nav-menu">
-        <ul>
-          <li class="active"><a href="index.html"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="about-me.html"><i class="bx bx-user"></i> <span>About Me</span></a></li>
-          <li><a href="resources.html"><i class="bx bx-book"></i> Resources</a></li>
-        </ul>
-      </nav><!-- .nav-menu -->
-      <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
-
     </div>
-  </header>
-  <!-- End Header -->
+
+    <nav class="nav-menu">
+      <ul>
+        <li class="active"><a href="index.html"><i class="bx bx-home"></i> <span>Home</span></a></li>
+        <li><a href="travel-blogs/travel-blogs.html"><i class="bx bx-map"></i> <span>Travel Blogs</span></a></li>
+        <li><a href="paintings/paintings.html"><i class="bx bx-palette"></i> <span>Paintings</span></a></li>
+        <li><a href="readings/readings.html"><i class="bx bx-book-open"></i> <span>Readings</span></a></li>
+        <li><a href="projects/projects.html"><i class="bx bx-briefcase"></i> <span>Projects</span></a></li>
+        <li><a href="resources/resources.html"><i class="bx bx-book"></i> <span>Resources</span></a></li>
+      </ul>
+    </nav><!-- .nav-menu -->
+    <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+  </div>
+</header>
+<!-- End Header -->
+
+
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">
       <h1>Sumit Kumar</h1>
-      <p>I'm <span class="typed" data-typed-items="a Developer., a Painter., a Sport Enthusiast."></span></p>
+      <p><span class="typed" data-typed-items="Traveller.,Painter.,Reader.,Tennis Enthusiast."></span></p>
     </div>
   </section>
   <!-- End Hero -->
