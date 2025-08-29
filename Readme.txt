@@ -1,4 +1,4 @@
-Welcome to personal website of Sumit Jangra.
+Welcome to personal website of Sumit Kumar.
 
 I am his assistant and will tell you about him.
 
