@@ -112,7 +112,19 @@
       width: 100%;
       height: 300px;
       object-fit: cover;
-      background: #f8f9fa;
+      background: #ffffff;
+      border: 1px solid #e9ecef;
+    }
+
+    .book-cover-placeholder {
+      width: 100%;
+      height: 300px;
+      background: #ffffff;
+      border: 1px solid #e9ecef;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: transparent;
     }
 
     .book-info {
@@ -222,7 +234,8 @@
 
     /* Responsive adjustments */
     @media (max-width: 768px) {
-      .book-cover {
+      .book-cover,
+      .book-cover-placeholder {
         height: 250px;
       }
       
@@ -379,10 +392,21 @@
       if (nextUrl && nextUrl !== currentUrl) {
         img.src = nextUrl;
       } else {
-        // All fallbacks failed, remove the onerror to prevent infinite loops
+        // All fallbacks failed, replace with blank placeholder
         img.onerror = null;
+        replaceWithPlaceholder(img);
         console.warn('All cover fallbacks failed for:', img.alt);
       }
+    }
+
+    // Function to replace failed image with blank placeholder
+    function replaceWithPlaceholder(img) {
+      const placeholder = document.createElement('div');
+      placeholder.className = 'book-cover-placeholder';
+      placeholder.setAttribute('aria-label', 'Book cover not available');
+
+      // Replace the image with the placeholder
+      img.parentNode.replaceChild(placeholder, img);
     }
 
     // Robust CSV parsing function for Goodreads format
@@ -743,8 +767,8 @@
       const div = document.createElement('div');
       div.className = `col-lg-3 col-md-4 col-sm-6 portfolio-item year-${book.readYear}`;
 
-      // Simple fallback for image errors
-      const onErrorHandler = `this.src='https://via.placeholder.com/300x400/e3f2fd/1565c0?text=${encodeURIComponent(book.title.substring(0, 15))}'`;
+      // Handle image errors by replacing with blank placeholder
+      const onErrorHandler = `replaceWithPlaceholder(this)`;
 
       // Create the book card content
       const bookCardContent = `
