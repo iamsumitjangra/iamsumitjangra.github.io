@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Test</title>
+</head>
+<body>
+    <h1>Simple JavaScript Test</h1>
+    <div id="result">Testing...</div>
+    
+    <script>
+        console.log('🚀 Simple test started');
+        
+        document.getElementById('result').innerHTML = 'JavaScript is working!';
+        
+        console.log('🔄 About to fetch CSV...');
+        
+        fetch('books.csv')
+            .then(response => {
+                console.log('✅ Fetch successful:', response.status);
+                document.getElementById('result').innerHTML = 'CSV fetch successful!';
+                return response.text();
+            })
+            .then(text => {
+                console.log('✅ CSV text received, length:', text.length);
+                document.getElementById('result').innerHTML = `CSV loaded! Length: ${text.length}`;
+            })
+            .catch(error => {
+                console.error('❌ Error:', error);
+                document.getElementById('result').innerHTML = `Error: ${error.message}`;
+            });
+    </script>
+</body>
+</html>

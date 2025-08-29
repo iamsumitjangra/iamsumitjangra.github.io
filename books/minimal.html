@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Minimal Test</title>
+</head>
+<body>
+    <h1>Minimal Test</h1>
+    <div id="status">Loading...</div>
+    
+    <script>
+        // Immediate execution
+        document.getElementById('status').innerHTML = 'JavaScript is working!';
+        
+        // Try fetch immediately
+        setTimeout(function() {
+            document.getElementById('status').innerHTML = 'Attempting fetch...';
+            
+            fetch('books.csv')
+                .then(function(response) {
+                    document.getElementById('status').innerHTML = 'Fetch successful! Status: ' + response.status;
+                })
+                .catch(function(error) {
+                    document.getElementById('status').innerHTML = 'Fetch failed: ' + error.message;
+                });
+        }, 100);
+    </script>
+</body>
+</html>

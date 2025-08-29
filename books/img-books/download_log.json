@@ -1,0 +1,762 @@
+{
+  "downloaded": {
+    "37937614.jpg": {
+      "title": "The Vengeance of Indra (Vikramaditya Veergatha, #3)",
+      "book_id": "37937614",
+      "isbn": "9386867575",
+      "url": "https://books.google.com/books/content?id=&printsec=frontcover&img=1&zoom=1&imgtk=9386867575",
+      "timestamp": 1756441543.759203
+    },
+    "41574532.jpg": {
+      "title": "The Spy and the Traitor: The Greatest Espionage Story of the Cold War",
+      "book_id": "41574532",
+      "isbn": "0241972132",
+      "url": "https://books.google.com/books/content?id=&printsec=frontcover&img=1&zoom=1&imgtk=0241972132",
+      "timestamp": 1756441546.880406
+    },
+    "198220970.jpg": {
+      "title": "Forward the Foundation (Foundation, #7)",
+      "book_id": "198220970",
+      "isbn": "0008516200",
+      "url": "https://books.google.com/books/content?id=&printsec=frontcover&img=1&zoom=1&imgtk=0008516200",
+      "timestamp": 1756441549.974817
+    },
+    "34197090.jpg": {
+      "title": "The Confidence Game: The Psychology of the Con and Why We Fall for It Every Time",
+      "book_id": "34197090",
+      "isbn": "1782113916",
+      "url": "https://covers.openlibrary.org/b/isbn/1782113916-L.jpg",
+      "timestamp": 1756441554.4424162
+    },
+    "6493321.jpg": {
+      "title": "Logicomix: An Epic Search for Truth",
+      "book_id": "6493321",
+      "isbn": "1596914521",
+      "url": "https://covers.openlibrary.org/b/isbn/1596914521-L.jpg",
+      "timestamp": 1756441557.4563782
+    },
+    "81977.jpg": {
+      "title": "What Has Government Done to Our Money? and The Case for a 100 Percent Gold Dollar",
+      "book_id": "81977",
+      "isbn": "0945466447",
+      "url": "https://covers.openlibrary.org/b/isbn/0945466447-L.jpg",
+      "timestamp": 1756441560.1841989
+    },
+    "31380409.jpg": {
+      "title": "Prelude to Foundation (Foundation, #6)",
+      "book_id": "31380409",
+      "isbn": "0008117489",
+      "url": "https://covers.openlibrary.org/b/isbn/0008117489-L.jpg",
+      "timestamp": 1756441563.2752771
+    },
+    "9515964.jpg": {
+      "title": "The Inimitable Jeeves (Jeeves, #2)",
+      "book_id": "9515964",
+      "isbn": "0393339807",
+      "url": "https://books.google.com/books/content?id=&printsec=frontcover&img=1&zoom=1&imgtk=0393339807",
+      "timestamp": 1756441565.4856331
+    },
+    "21413662.jpg": {
+      "title": "What If?: Serious Scientific Answers to Absurd Hypothetical Questions",
+      "book_id": "21413662",
+      "isbn": "0544272994",
+      "url": "https://covers.openlibrary.org/b/isbn/0544272994-L.jpg",
+      "timestamp": 1756441567.475343
+    },
+    "53450790.jpg": {
+      "title": "The Perfect Marriage (Perfect, #1)",
+      "book_id": "53450790",
+      "isbn": "1913419657",
+      "url": "https://covers.openlibrary.org/b/isbn/1913419657-L.jpg",
+      "timestamp": 1756441569.300094
+    },
+    "8696.jpg": {
+      "title": "Last Chance to See",
+      "book_id": "8696",
+      "isbn": "0345371984",
+      "url": "https://covers.openlibrary.org/b/isbn/0345371984-L.jpg",
+      "timestamp": 1756441572.2695732
+    },
+    "29582.jpg": {
+      "title": "Foundation and Earth (Foundation, #5)",
+      "book_id": "29582",
+      "isbn": "0553587579",
+      "url": "https://covers.openlibrary.org/b/isbn/0553587579-L.jpg",
+      "timestamp": 1756441574.925784
+    },
+    "29939161.jpg": {
+      "title": "Radical Candor: Be a Kickass Boss Without Losing Your Humanity",
+      "book_id": "29939161",
+      "isbn": "1250103509",
+      "url": "https://covers.openlibrary.org/b/isbn/1250103509-L.jpg",
+      "timestamp": 1756441577.684861
+    },
+    "1009709.jpg": {
+      "title": "Death on the Nile (Hercule Poirot, #18)",
+      "book_id": "1009709",
+      "isbn": "0007815530",
+      "url": "https://covers.openlibrary.org/b/isbn/0007815530-L.jpg",
+      "timestamp": 1756441580.531622
+    },
+    "76683.jpg": {
+      "title": "Foundation's Edge (Foundation, #4)",
+      "book_id": "76683",
+      "isbn": "0553293389",
+      "url": "https://covers.openlibrary.org/b/isbn/0553293389-L.jpg",
+      "timestamp": 1756441583.241879
+    },
+    "36064445.jpg": {
+      "title": "Skin in the Game: The Hidden Asymmetries in Daily Life",
+      "book_id": "36064445",
+      "isbn": "0241300657",
+      "url": "https://covers.openlibrary.org/b/isbn/0241300657-L.jpg",
+      "timestamp": 1756441585.0336058
+    },
+    "22512931.jpg": {
+      "title": "Building Microservices: Designing Fine-Grained Systems",
+      "book_id": "22512931",
+      "isbn": "1491950358",
+      "url": "https://covers.openlibrary.org/b/isbn/1491950358-L.jpg",
+      "timestamp": 1756441588.0958679
+    },
+    "18404285.jpg": {
+      "title": "Be Careful What You Wish For (The Clifton Chronicles, #4)",
+      "book_id": "18404285",
+      "isbn": "1250034485",
+      "url": "https://covers.openlibrary.org/b/isbn/1250034485-L.jpg",
+      "timestamp": 1756441590.301226
+    },
+    "18373.jpg": {
+      "title": "Flowers for Algernon",
+      "book_id": "18373",
+      "isbn": "015603008X",
+      "url": "https://covers.openlibrary.org/b/isbn/015603008X-L.jpg",
+      "timestamp": 1756441592.973418
+    },
+    "12677794.jpg": {
+      "title": "7 Secrets Of Shiva",
+      "book_id": "12677794",
+      "isbn": "938065863X",
+      "url": "https://covers.openlibrary.org/b/isbn/938065863X-L.jpg",
+      "timestamp": 1756441595.92881
+    },
+    "52950915.jpg": {
+      "title": "Die with Zero: Getting All You Can from Your Money and Your Life",
+      "book_id": "52950915",
+      "isbn": "0358099765",
+      "url": "https://covers.openlibrary.org/b/isbn/0358099765-L.jpg",
+      "timestamp": 1756441597.991209
+    },
+    "61846327.jpg": {
+      "title": "War of Lanka (Ram Chandra, #4)",
+      "book_id": "61846327",
+      "isbn": "9356291527",
+      "url": "https://covers.openlibrary.org/b/isbn/9356291527-L.jpg",
+      "timestamp": 1756441600.813545
+    },
+    "209194.jpg": {
+      "title": "The Man in the Brown Suit (Colonel Race, #1)",
+      "book_id": "209194",
+      "isbn": "0007151667",
+      "url": "https://covers.openlibrary.org/b/isbn/0007151667-L.jpg",
+      "timestamp": 1756441603.5868192
+    },
+    "50221.jpg": {
+      "title": "God's Debris: A Thought Experiment",
+      "book_id": "50221",
+      "isbn": "0740747878",
+      "url": "https://covers.openlibrary.org/b/isbn/0740747878-L.jpg",
+      "timestamp": 1756441606.334572
+    },
+    "29580.jpg": {
+      "title": "Second Foundation (Foundation, #3)",
+      "book_id": "29580",
+      "isbn": "0553803735",
+      "url": "https://covers.openlibrary.org/b/isbn/0553803735-L.jpg",
+      "timestamp": 1756441609.227603
+    },
+    "35133922.jpg": {
+      "title": "Educated",
+      "book_id": "35133922",
+      "isbn": "0399590501",
+      "url": "https://covers.openlibrary.org/b/isbn/0399590501-L.jpg",
+      "timestamp": 1756441611.0525389
+    },
+    "35167718.jpg": {
+      "title": "\"What Do You Care What Other People Think?\": Further Adventures of a Curious Character",
+      "book_id": "35167718",
+      "isbn": "0393355640",
+      "url": "https://covers.openlibrary.org/b/isbn/0393355640-L.jpg",
+      "timestamp": 1756441614.040894
+    },
+    "46266188.jpg": {
+      "title": "The Fifth Risk: Undoing Democracy",
+      "book_id": "46266188",
+      "isbn": "0393357457",
+      "url": "https://covers.openlibrary.org/b/isbn/0393357457-L.jpg",
+      "timestamp": 1756441615.810278
+    },
+    "34101725.jpg": {
+      "title": "God: A Human History",
+      "book_id": "34101725",
+      "isbn": "0553394738",
+      "url": "https://covers.openlibrary.org/b/isbn/0553394738-L.jpg",
+      "timestamp": 1756441618.538482
+    },
+    "36133677.jpg": {
+      "title": "FOREVER IS A LIE",
+      "book_id": "36133677",
+      "isbn": "9386815338",
+      "url": "https://books.google.com/books/content?id=&printsec=frontcover&img=1&zoom=1&imgtk=9386815338",
+      "timestamp": 1756441620.817814
+    },
+    "15793074.jpg": {
+      "title": "Best Kept Secret (The Clifton Chronicles, #3)",
+      "book_id": "15793074",
+      "isbn": "125000098X",
+      "url": "https://covers.openlibrary.org/b/isbn/125000098X-L.jpg",
+      "timestamp": 1756441624.61835
+    },
+    "36301635.jpg": {
+      "title": "Forever Is True",
+      "book_id": "36301635",
+      "isbn": "0143427504",
+      "url": "https://books.google.com/books/content?id=&printsec=frontcover&img=1&zoom=1&imgtk=0143427504",
+      "timestamp": 1756441626.8477929
+    },
+    "200572.jpg": {
+      "title": "My Man Jeeves (Jeeves, #1)",
+      "book_id": "200572",
+      "isbn": "1585678759",
+      "url": "https://covers.openlibrary.org/b/isbn/1585678759-L.jpg",
+      "timestamp": 1756441630.32224
+    },
+    "55337928.jpg": {
+      "title": "How to Be a Writer",
+      "book_id": "55337928",
+      "isbn": "9353579376",
+      "url": "https://books.google.com/books/content?id=&printsec=frontcover&img=1&zoom=1&imgtk=9353579376",
+      "timestamp": 1756441632.53575
+    },
+    "31380461.jpg": {
+      "title": "Foundation and Empire (Foundation, #2)",
+      "book_id": "31380461",
+      "isbn": "0008117500",
+      "url": "https://covers.openlibrary.org/b/isbn/0008117500-L.jpg",
+      "timestamp": 1756441636.3848388
+    },
+    "41793.jpg": {
+      "title": "Hackers and Painters: Big Ideas from the Computer Age",
+      "book_id": "41793",
+      "isbn": "0596006624",
+      "url": "https://covers.openlibrary.org/b/isbn/0596006624-L.jpg",
+      "timestamp": 1756441639.050176
+    },
+    "26862950.jpg": {
+      "title": "Introducing Psychology: A Graphic Guide",
+      "book_id": "26862950",
+      "isbn": "1848317565",
+      "url": "https://books.google.com/books/content?id=&printsec=frontcover&img=1&zoom=1&imgtk=1848317565",
+      "timestamp": 1756441642.0835688
+    },
+    "56567236.jpg": {
+      "title": "One of Us is Lying",
+      "book_id": "56567236",
+      "isbn": "0241520770",
+      "url": "https://books.google.com/books/content?id=&printsec=frontcover&img=1&zoom=1&imgtk=0241520770",
+      "timestamp": 1756441645.181368
+    },
+    "43822820.jpg": {
+      "title": "The Family Upstairs (The Family Upstairs, #1)",
+      "book_id": "43822820",
+      "isbn": "1501190105",
+      "url": "https://covers.openlibrary.org/b/isbn/1501190105-L.jpg",
+      "timestamp": 1756441648.716993
+    },
+    "33279921.jpg": {
+      "title": "Algorithms To Live By",
+      "book_id": "33279921",
+      "isbn": "0007547994",
+      "url": "https://covers.openlibrary.org/b/isbn/0007547994-L.jpg",
+      "timestamp": 1756441651.641404
+    },
+    "31380440.jpg": {
+      "title": "Foundation (Foundation #1)",
+      "book_id": "31380440",
+      "isbn": "0008117497",
+      "url": "https://covers.openlibrary.org/b/isbn/0008117497-L.jpg",
+      "timestamp": 1756441654.56394
+    },
+    "41881472.jpg": {
+      "title": "The Psychology of Money",
+      "book_id": "41881472",
+      "isbn": "0857197681",
+      "url": "https://covers.openlibrary.org/b/isbn/0857197681-L.jpg",
+      "timestamp": 1756441655.716794
+    },
+    "12160906.jpg": {
+      "title": "The Sins of the Father (The Clifton Chronicles, #2)",
+      "book_id": "12160906",
+      "isbn": "1250000971",
+      "url": "https://covers.openlibrary.org/b/isbn/1250000971-L.jpg",
+      "timestamp": 1756441659.897778
+    },
+    "31288429.jpg": {
+      "title": "The Conspiracy at Meru (Vikramaditya Veergatha, #2)",
+      "book_id": "31288429",
+      "isbn": "8184958870",
+      "url": "https://books.google.com/books/content?id=&printsec=frontcover&img=1&zoom=1&imgtk=8184958870",
+      "timestamp": 1756441662.175704
+    },
+    "157993.jpg": {
+      "title": "The Little Prince",
+      "book_id": "157993",
+      "isbn": "0152023984",
+      "url": "https://covers.openlibrary.org/b/isbn/0152023984-L.jpg",
+      "timestamp": 1756441665.854099
+    },
+    "32191710.jpg": {
+      "title": "Astrophysics for People in a Hurry",
+      "book_id": "32191710",
+      "isbn": "0393609391",
+      "url": "https://covers.openlibrary.org/b/isbn/0393609391-L.jpg",
+      "timestamp": 1756441667.0035741
+    },
+    "14781201.jpg": {
+      "title": "I Funny: A Middle School Story (I Funny, #1)",
+      "book_id": "14781201",
+      "isbn": "0316206938",
+      "url": "https://covers.openlibrary.org/b/isbn/0316206938-L.jpg",
+      "timestamp": 1756441668.146403
+    },
+    "23346490.jpg": {
+      "title": "Zero To One",
+      "book_id": "23346490",
+      "isbn": "0753555204",
+      "url": "https://covers.openlibrary.org/b/isbn/0753555204-L.jpg",
+      "timestamp": 1756441671.896498
+    },
+    "28092870.jpg": {
+      "title": "Homo Deus: A Brief History of Tomorrow",
+      "book_id": "28092870",
+      "isbn": "1910701882",
+      "url": "https://covers.openlibrary.org/b/isbn/1910701882-L.jpg",
+      "timestamp": 1756441674.674939
+    },
+    "41800948.jpg": {
+      "title": "No Shortcuts: Rare Insights from 15 Successful Startup Founders",
+      "book_id": "41800948",
+      "isbn": "9352808266",
+      "url": "https://books.google.com/books/content?id=&printsec=frontcover&img=1&zoom=1&imgtk=9352808266",
+      "timestamp": 1756441676.920744
+    },
+    "13623874.jpg": {
+      "title": "Mossad: The Greatest Missions of the Israeli Secret Service",
+      "book_id": "13623874",
+      "isbn": "0062123408",
+      "url": "https://covers.openlibrary.org/b/isbn/0062123408-L.jpg",
+      "timestamp": 1756441680.684404
+    },
+    "30408033.jpg": {
+      "title": "A Horse Walks into a Bar",
+      "book_id": "30408033",
+      "isbn": "0451493974",
+      "url": "https://covers.openlibrary.org/b/isbn/0451493974-L.jpg",
+      "timestamp": 1756441684.686711
+    },
+    "449573.jpg": {
+      "title": "The Theory of Everything: The Origin and Fate of the Universe",
+      "book_id": "449573",
+      "isbn": "0641587716",
+      "url": "https://books.google.com/books/content?id=&printsec=frontcover&img=1&zoom=1&imgtk=0641587716",
+      "timestamp": 1756441690.2029939
+    },
+    "485894.jpg": {
+      "title": "The Metamorphosis",
+      "book_id": "485894",
+      "isbn": "0553213695",
+      "url": "https://covers.openlibrary.org/b/isbn/0553213695-L.jpg",
+      "timestamp": 1756441693.722454
+    },
+    "6479723.jpg": {
+      "title": "The Crucifix Killer (Robert Hunter, #1)",
+      "book_id": "6479723",
+      "isbn": "1847376223",
+      "url": "https://covers.openlibrary.org/b/isbn/1847376223-L.jpg",
+      "timestamp": 1756441695.76774
+    },
+    "22557272.jpg": {
+      "title": "The Girl on the Train",
+      "book_id": "22557272",
+      "isbn": "1594633665",
+      "url": "https://covers.openlibrary.org/b/isbn/1594633665-L.jpg",
+      "timestamp": 1756441697.937183
+    },
+    "40097951.jpg": {
+      "title": "The Silent Patient",
+      "book_id": "40097951",
+      "isbn": "1250301696",
+      "url": "https://covers.openlibrary.org/b/isbn/1250301696-L.jpg",
+      "timestamp": 1756441700.887846
+    },
+    "13099738.jpg": {
+      "title": "Steal Like an Artist: 10 Things Nobody Told You About Being Creative",
+      "book_id": "13099738",
+      "isbn": "0761169253",
+      "url": "https://covers.openlibrary.org/b/isbn/0761169253-L.jpg",
+      "timestamp": 1756441702.7898
+    },
+    "368593.jpg": {
+      "title": "The 4-Hour Workweek",
+      "book_id": "368593",
+      "isbn": "0307353133",
+      "url": "https://covers.openlibrary.org/b/isbn/0307353133-L.jpg",
+      "timestamp": 1756441705.50575
+    },
+    "4671.jpg": {
+      "title": "The Great Gatsby",
+      "book_id": "4671",
+      "isbn": "0743273567",
+      "url": "https://covers.openlibrary.org/b/isbn/0743273567-L.jpg",
+      "timestamp": 1756441710.414839
+    },
+    "840.jpg": {
+      "title": "The Design of Everyday Things",
+      "book_id": "840",
+      "isbn": "0465067107",
+      "url": "https://covers.openlibrary.org/b/isbn/0465067107-L.jpg",
+      "timestamp": 1756441713.131906
+    },
+    "16319.jpg": {
+      "title": "The Body in the Library (Miss Marple, #2)",
+      "book_id": "16319",
+      "isbn": "157912626X",
+      "url": "https://covers.openlibrary.org/b/isbn/157912626X-L.jpg",
+      "timestamp": 1756441715.7640069
+    },
+    "12820793.jpg": {
+      "title": "The Oath of the Vayuputras (Shiva Trilogy, #3)",
+      "book_id": "12820793",
+      "isbn": "9382618341",
+      "url": "https://covers.openlibrary.org/b/isbn/9382618341-L.jpg",
+      "timestamp": 1756441717.189557
+    },
+    "36236125.jpg": {
+      "title": "Invisible Monsters",
+      "book_id": "36236125",
+      "isbn": "0393355950",
+      "url": "https://covers.openlibrary.org/b/isbn/0393355950-L.jpg",
+      "timestamp": 1756441719.0033522
+    },
+    "128029.jpg": {
+      "title": "A Thousand Splendid Suns",
+      "book_id": "128029",
+      "isbn": "1594489505",
+      "url": "https://covers.openlibrary.org/b/isbn/1594489505-L.jpg",
+      "timestamp": 1756441721.9924731
+    },
+    "34680719.jpg": {
+      "title": "Sita: Warrior of Mithila (Ram Chandra, #2)",
+      "book_id": "34680719",
+      "isbn": "9386224585",
+      "url": "https://covers.openlibrary.org/b/isbn/9386224585-L.jpg",
+      "timestamp": 1756441725.6613271
+    },
+    "7201.jpg": {
+      "title": "As the Crow Flies",
+      "book_id": "7201",
+      "isbn": "0312997116",
+      "url": "https://covers.openlibrary.org/b/isbn/0312997116-L.jpg",
+      "timestamp": 1756441728.2976499
+    },
+    "78983.jpg": {
+      "title": "Kane & Abel (Kane & Abel, #1)",
+      "book_id": "78983",
+      "isbn": "0312995059",
+      "url": "https://covers.openlibrary.org/b/isbn/0312995059-L.jpg",
+      "timestamp": 1756441731.039883
+    },
+    "13.jpg": {
+      "title": "The Ultimate Hitchhiker\u2019s Guide to the Galaxy (Hitchhiker's Guide to the Galaxy, #1-5)",
+      "book_id": "13",
+      "isbn": "0345453743",
+      "url": "https://covers.openlibrary.org/b/isbn/0345453743-L.jpg",
+      "timestamp": 1756441733.129817
+    },
+    "81903.jpg": {
+      "title": "Curtain (Hercule Poirot, #44)",
+      "book_id": "81903",
+      "isbn": "0425173747",
+      "url": "https://covers.openlibrary.org/b/isbn/0425173747-L.jpg",
+      "timestamp": 1756441735.839913
+    },
+    "16328.jpg": {
+      "title": "The Murder of Roger Ackroyd (Hercule Poirot, #4)",
+      "book_id": "16328",
+      "isbn": "1579126278",
+      "url": "https://books.google.com/books/content?id=&printsec=frontcover&img=1&zoom=1&imgtk=1579126278",
+      "timestamp": 1756441738.6481888
+    },
+    "27036528.jpg": {
+      "title": "Ego Is the Enemy",
+      "book_id": "27036528",
+      "isbn": "1591847818",
+      "url": "https://covers.openlibrary.org/b/isbn/1591847818-L.jpg",
+      "timestamp": 1756441741.0934558
+    },
+    "3869.jpg": {
+      "title": "A Brief History of Time",
+      "book_id": "3869",
+      "isbn": "0553380168",
+      "url": "https://covers.openlibrary.org/b/isbn/0553380168-L.jpg",
+      "timestamp": 1756441742.49409
+    },
+    "433567.jpg": {
+      "title": "Flatland: A Romance of Many Dimensions",
+      "book_id": "433567",
+      "isbn": "048627263X",
+      "url": "https://covers.openlibrary.org/b/isbn/048627263X-L.jpg",
+      "timestamp": 1756441745.179281
+    },
+    "10872085.jpg": {
+      "title": "Only Time Will Tell (The Clifton Chronicles, #1)",
+      "book_id": "10872085",
+      "isbn": "031253955X",
+      "url": "https://covers.openlibrary.org/b/isbn/031253955X-L.jpg",
+      "timestamp": 1756441749.0866828
+    },
+    "34118223.jpg": {
+      "title": "Adiyogi: The Source of Yoga",
+      "book_id": "34118223",
+      "isbn": "9352643925",
+      "url": "https://books.google.com/books/content?id=&printsec=frontcover&img=1&zoom=1&imgtk=9352643925",
+      "timestamp": 1756441751.293094
+    },
+    "102868.jpg": {
+      "title": "A Study in Scarlet (Sherlock Holmes, #1)",
+      "book_id": "102868",
+      "isbn": "1420925539",
+      "url": "https://covers.openlibrary.org/b/isbn/1420925539-L.jpg",
+      "timestamp": 1756441755.150733
+    },
+    "10098912.jpg": {
+      "title": "Chanakya's Chant",
+      "book_id": "10098912",
+      "isbn": "9380658672",
+      "url": "https://books.google.com/books/content?id=&printsec=frontcover&img=1&zoom=1&imgtk=9380658672",
+      "timestamp": 1756441758.193562
+    },
+    "170448.jpg": {
+      "title": "Animal Farm",
+      "book_id": "170448",
+      "isbn": "0451526341",
+      "url": "https://covers.openlibrary.org/b/isbn/0451526341-L.jpg",
+      "timestamp": 1756441762.597866
+    },
+    "38447.jpg": {
+      "title": "The Handmaid\u2019s Tale (The Handmaid's Tale, #1)",
+      "book_id": "38447",
+      "isbn": "038549081X",
+      "url": "https://covers.openlibrary.org/b/isbn/038549081X-L.jpg",
+      "timestamp": 1756441766.347202
+    },
+    "2429135.jpg": {
+      "title": "The Girl With the Dragon Tattoo (Millennium, #1)",
+      "book_id": "2429135",
+      "isbn": "0670069019",
+      "url": "https://covers.openlibrary.org/b/isbn/0670069019-L.jpg",
+      "timestamp": 1756441769.285751
+    },
+    "24724602.jpg": {
+      "title": "Flash Boys: A Wall Street Revolt",
+      "book_id": "24724602",
+      "isbn": "0393351599",
+      "url": "https://covers.openlibrary.org/b/isbn/0393351599-L.jpg",
+      "timestamp": 1756441772.771241
+    },
+    "7865083.jpg": {
+      "title": "Liar's Poker",
+      "book_id": "7865083",
+      "isbn": "039333869X",
+      "url": "https://covers.openlibrary.org/b/isbn/039333869X-L.jpg",
+      "timestamp": 1756441773.9371378
+    },
+    "30843.jpg": {
+      "title": "The Great Indian Novel",
+      "book_id": "30843",
+      "isbn": "1559701943",
+      "url": "https://covers.openlibrary.org/b/isbn/1559701943-L.jpg",
+      "timestamp": 1756441777.308925
+    },
+    "11468377.jpg": {
+      "title": "Thinking, Fast and Slow",
+      "book_id": "11468377",
+      "isbn": "0374275637",
+      "url": "https://covers.openlibrary.org/b/isbn/0374275637-L.jpg",
+      "timestamp": 1756441780.0314019
+    },
+    "2657.jpg": {
+      "title": "To Kill a Mockingbird",
+      "book_id": "2657",
+      "isbn": "0060935464",
+      "url": "https://covers.openlibrary.org/b/isbn/0060935464-L.jpg",
+      "timestamp": 1756441783.023394
+    },
+    "960.jpg": {
+      "title": "Angels & Demons (Robert Langdon, #1)",
+      "book_id": "960",
+      "isbn": "1416524797",
+      "url": "https://covers.openlibrary.org/b/isbn/1416524797-L.jpg",
+      "timestamp": 1756441784.892642
+    },
+    "117047.jpg": {
+      "title": "The Blind Watchmaker: Why the Evidence of Evolution Reveals a Universe Without Design",
+      "book_id": "117047",
+      "isbn": "0141026162",
+      "url": "https://covers.openlibrary.org/b/isbn/0141026162-L.jpg",
+      "timestamp": 1756441787.634214
+    },
+    "21480734.jpg": {
+      "title": "Dataclysm: Who We Are (When We Think No One's Looking)",
+      "book_id": "21480734",
+      "isbn": "0385347375",
+      "url": "https://covers.openlibrary.org/b/isbn/0385347375-L.jpg",
+      "timestamp": 1756441790.3897831
+    },
+    "42611483.jpg": {
+      "title": "Escaping the Build Trap: How Effective Product Management Creates Real Value",
+      "book_id": "42611483",
+      "isbn": "1491973757",
+      "url": "https://books.google.com/books/content?id=&printsec=frontcover&img=1&zoom=1&imgtk=1491973757",
+      "timestamp": 1756441794.664743
+    },
+    "1202.jpg": {
+      "title": "Freakonomics: A Rogue Economist Explores the Hidden Side of Everything",
+      "book_id": "1202",
+      "isbn": "0061234001",
+      "url": "https://covers.openlibrary.org/b/isbn/0061234001-L.jpg",
+      "timestamp": 1756441799.250156
+    },
+    "61535.jpg": {
+      "title": "The Selfish Gene",
+      "book_id": "61535",
+      "isbn": "0199291152",
+      "url": "https://covers.openlibrary.org/b/isbn/0199291152-L.jpg",
+      "timestamp": 1756441801.5694542
+    },
+    "5544.jpg": {
+      "title": "Surely You're Joking, Mr. Feynman!: Adventures of a Curious Character",
+      "book_id": "5544",
+      "isbn": "0393316041",
+      "url": "https://covers.openlibrary.org/b/isbn/0393316041-L.jpg",
+      "timestamp": 1756441804.207507
+    },
+    "12633800.jpg": {
+      "title": "Models: Attract Women Through Honesty",
+      "book_id": "12633800",
+      "isbn": "1463750358",
+      "url": "https://covers.openlibrary.org/b/isbn/1463750358-L.jpg",
+      "timestamp": 1756441807.933831
+    },
+    "22874559.jpg": {
+      "title": "Half Girlfriend",
+      "book_id": "22874559",
+      "isbn": "8129135728",
+      "url": "https://covers.openlibrary.org/b/isbn/8129135728-L.jpg",
+      "timestamp": 1756441810.04093
+    },
+    "39403470.jpg": {
+      "title": "The People Vs Tech: How the Internet Is Killing Democracy (and How We Save It)",
+      "book_id": "39403470",
+      "isbn": "147355912X",
+      "url": "https://books.google.com/books/content?id=&printsec=frontcover&img=1&zoom=1&imgtk=147355912X",
+      "timestamp": 1756441812.239073
+    },
+    "97018.jpg": {
+      "title": "Intelligence: The Creative Response to Now (Osho Insights for a New Way of Living)",
+      "book_id": "97018",
+      "isbn": "0312320728",
+      "url": "https://covers.openlibrary.org/b/isbn/0312320728-L.jpg",
+      "timestamp": 1756441816.500082
+    },
+    "97010.jpg": {
+      "title": "Awareness: The Key to Living in Balance (Insights for a New Way of Living)",
+      "book_id": "97010",
+      "isbn": "0312275633",
+      "url": "https://covers.openlibrary.org/b/isbn/0312275633-L.jpg",
+      "timestamp": 1756441819.939141
+    },
+    "24709327.jpg": {
+      "title": "Scion of Ikshvaku (Ram Chandra, #1)",
+      "book_id": "24709327",
+      "isbn": "9385152149",
+      "url": "https://covers.openlibrary.org/b/isbn/9385152149-L.jpg",
+      "timestamp": 1756441822.1589582
+    },
+    "853510.jpg": {
+      "title": "Murder on the Orient Express (Hercule Poirot, #10)",
+      "book_id": "853510",
+      "isbn": "0007119313",
+      "url": "https://covers.openlibrary.org/b/isbn/0007119313-L.jpg",
+      "timestamp": 1756441825.115954
+    },
+    "38315.jpg": {
+      "title": "Fooled by Randomness: The Hidden Role of Chance in Life and in the Markets (Incerto)",
+      "book_id": "38315",
+      "isbn": "0812975219",
+      "url": "https://covers.openlibrary.org/b/isbn/0812975219-L.jpg",
+      "timestamp": 1756441827.753828
+    },
+    "313605.jpg": {
+      "title": "Getting to Yes: Negotiating Agreement Without Giving In",
+      "book_id": "313605",
+      "isbn": "0140157352",
+      "url": "https://covers.openlibrary.org/b/isbn/0140157352-L.jpg",
+      "timestamp": 1756441830.260604
+    },
+    "4069.jpg": {
+      "title": "Man's Search for Meaning",
+      "book_id": "4069",
+      "isbn": "080701429X",
+      "url": "https://covers.openlibrary.org/b/isbn/080701429X-L.jpg",
+      "timestamp": 1756441832.910081
+    },
+    "136181.jpg": {
+      "title": "The Halo Effect: ... and the Eight Other Business Delusions That Deceive Managers",
+      "book_id": "136181",
+      "isbn": "0743291255",
+      "url": "https://covers.openlibrary.org/b/isbn/0743291255-L.jpg",
+      "timestamp": 1756441835.937161
+    }
+  },
+  "failed": {
+    "43306206.jpg": 1,
+    "40611510.jpg": 1,
+    "32998876.jpg": 1,
+    "16032905.jpg": 1,
+    "51933429.jpg": 1,
+    "31288622.jpg": 1,
+    "19063.jpg": 1,
+    "34466963.jpg": 1,
+    "25196583.jpg": 1,
+    "18869177.jpg": 1,
+    "32542.jpg": 1,
+    "7913305.jpg": 1,
+    "8921.jpg": 1,
+    "23692271.jpg": 1,
+    "40961427.jpg": 1,
+    "46756.jpg": 1,
+    "15158.jpg": 1,
+    "35286872.jpg": 1,
+    "52283963.jpg": 1,
+    "23419.jpg": 1,
+    "28257707.jpg": 1,
+    "40948565.jpg": 1
+  },
+  "stats": {
+    "total": 126,
+    "success": 104,
+    "failed": 22,
+    "last_run": 1756441836.43979
+  }
+}

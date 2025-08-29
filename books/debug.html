@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Books Debug</title>
+</head>
+<body>
+    <h1>Books Debug Page</h1>
+    <div id="loading">Loading...</div>
+    <div id="books-container" style="display: none;"></div>
+    <div id="portfolio-flters"></div>
+    
+    <script>
+        console.log('🚀 Debug page loaded');
+        
+        // Test all the functions from the main page
+        let booksData = [];
+        let filteredBooks = [];
+        
+        // Generate cover URL - prioritize local static images with external fallbacks
+        const generateCoverUrl = (bookId, isbn, title) => {
+          // First try local static image
+          const filename = bookId ? `${bookId}.jpg` : generateFilenameFromTitle(title);
+          return `img-books/${filename}`;
+        };
+
+        // Generate filename from title (matches Python script logic)
+        const generateFilenameFromTitle = (title) => {
+          const cleanTitle = title.toLowerCase()
+            .replace(/[^a-z0-9\s]/g, '')
+            .replace(/\s+/g, '-')
+            .substring(0, 50);
+          return `${cleanTitle}.jpg`;
+        };
+        
+        // Parse a single CSV line with proper quote handling
+        function parseCSVLine(line) {
+          const result = [];
+          let current = '';
+          let inQuotes = false;
+          let i = 0;
+
+          while (i < line.length) {
+            const char = line[i];
+
+            if (char === '"') {
+              if (inQuotes && line[i + 1] === '"') {
+                // Escaped quote
+                current += '"';
+                i += 2;
+                continue;
+              } else {
+                // Toggle quote state
+                inQuotes = !inQuotes;
+                i++;
+                continue;
+              }
+            }
+
+            if (char === ',' && !inQuotes) {
+              result.push(current.trim());
+              current = '';
+            } else {
+              current += char;
+            }
+
+            i++;
+          }
+
+          result.push(current.trim());
+          return result;
+        }
+        
+        // Convert CSV row to book object - only for books that have been read
+        function convertCSVRowToBook(csvRow) {
+          try {
+            const title = csvRow['Title'] || '';
+            const dateRead = csvRow['Date Read'] || '';
+            const exclusiveShelf = csvRow['Exclusive Shelf'] || '';
+
+            // Only include books that are marked as "read" AND have a Date Read
+            if (!title || !dateRead || exclusiveShelf !== 'read') return null;
+
+            const bookId = csvRow['Book Id'] || '';
+            const isbn = csvRow['ISBN'] ? csvRow['ISBN'].replace(/^="?|"?$/g, '').trim() : '';
+
+            return {
+              id: bookId,
+              title: title,
+              author: csvRow['Author'] || 'Unknown Author',
+              isbn: isbn,
+              pages: csvRow['Number of Pages'] ? parseInt(csvRow['Number of Pages']) : null,
+              rating: csvRow['Average Rating'] ? parseFloat(csvRow['Average Rating']) : 0,
+              dateRead: dateRead,
+              readYear: dateRead ? (new Date(dateRead).getFullYear() || 2024) : 2024,
+              cover: generateCoverUrl(bookId, isbn, title),
+              goodreadsId: bookId,
+              goodreadsUrl: bookId ? `https://www.goodreads.com/book/show/${bookId}` : null
+            };
+          } catch (error) {
+            console.warn('Error converting CSV row to book:', error, csvRow);
+            return null;
+          }
+        }
+        
+        // Robust CSV parsing function for Goodreads format
+        function parseCSV(csvText) {
+          try {
+            const lines = csvText.split('\n');
+            if (lines.length < 2) {
+              console.error('CSV has insufficient lines');
+              return [];
+            }
+
+            // Parse headers using the robust parser
+            const headers = parseCSVLine(lines[0]);
+            console.log('📋 CSV Headers found:', headers.length, 'columns');
+
+            const books = [];
+            let successCount = 0;
+
+            for (let i = 1; i < lines.length; i++) {
+              const line = lines[i].trim();
+              if (!line) continue;
+
+              try {
+                const values = parseCSVLine(line);
+
+                if (values.length < 10) { // Skip rows with too few columns
+                  continue;
+                }
+
+                const book = {};
+                headers.forEach((header, index) => {
+                  book[header] = values[index] || '';
+                });
+
+                // Convert to our book object format
+                const bookObj = convertCSVRowToBook(book);
+                if (bookObj && bookObj.title) {
+                  books.push(bookObj);
+                  successCount++;
+                }
+              } catch (error) {
+                console.warn(`Error parsing line ${i}:`, error.message);
+                continue;
+              }
+            }
+
+            console.log(`✅ Successfully parsed ${successCount} books`);
+            return books;
+          } catch (error) {
+            console.error('Fatal CSV parsing error:', error);
+            return [];
+          }
+        }
+        
+        // Test the CSV loading
+        console.log('🔄 Starting CSV test...');
+        fetch('books.csv')
+            .then(response => {
+                console.log('📄 CSV fetch response:', response.status);
+                return response.text();
+            })
+            .then(csvText => {
+                console.log('📄 CSV loaded, length:', csvText.length);
+                
+                booksData = parseCSV(csvText);
+                console.log(`📚 Parsed ${booksData.length} books`);
+                console.log('📚 Sample books:', booksData.slice(0, 3));
+                
+                document.getElementById('loading').innerHTML = `Loaded ${booksData.length} books successfully!`;
+            })
+            .catch(error => {
+                console.error('❌ Error:', error);
+                document.getElementById('loading').innerHTML = `Error: ${error.message}`;
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Books - Sumit Kumar</title>
+  
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #f5f5f5; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .header { text-align: center; margin-bottom: 40px; }
+    .books-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
+    .book-card { 
+      background: white; 
+      border-radius: 10px; 
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+      overflow: hidden; 
+      transition: transform 0.3s ease;
+    }
+    .book-card:hover { transform: translateY(-5px); }
+    .book-cover { width: 100%; height: 300px; object-fit: cover; background: #f0f0f0; }
+    .book-info { padding: 15px; }
+    .book-title { font-size: 16px; font-weight: bold; margin-bottom: 8px; color: #333; }
+    .book-author { font-size: 14px; color: #666; margin-bottom: 8px; font-style: italic; }
+    .book-rating { color: #f39c12; margin-bottom: 5px; }
+    .loading { text-align: center; padding: 40px; font-size: 18px; color: #149ddd; }
+    .error { text-align: center; padding: 40px; color: #dc3545; }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>My Library</h1>
+      <p><em>My problem with reading books is that I get distracted... by other books.</em></p>
+    </div>
+
+    <div id="loading" class="loading">
+      📚 Loading your library...
+    </div>
+
+    <div id="books-container" class="books-grid" style="display: none;">
+      <!-- Books will be loaded here -->
+    </div>
+  </div>
+
+  <script>
+    console.log('📚 Starting book loading...');
+    
+    // Sample books data (we'll replace this with CSV data)
+    let sampleBooks = [
+      {
+        title: "The Courage to Be Disliked",
+        author: "Ichiro Kishimi",
+        rating: 4.0,
+        cover: "img-books/43306206.jpg",
+        dateRead: "2025/08/03"
+      },
+      {
+        title: "The Spy and the Traitor",
+        author: "Ben Macintyre", 
+        rating: 4.5,
+        cover: "img-books/41574532.jpg",
+        dateRead: "2025/02/16"
+      },
+      {
+        title: "Foundation",
+        author: "Isaac Asimov",
+        rating: 4.2,
+        cover: "img-books/31380440.jpg",
+        dateRead: "2024/12/15"
+      }
+    ];
+
+    function handleImageError(img) {
+      // Fallback to external API if local image fails
+      const title = img.dataset.title;
+      img.src = `https://via.placeholder.com/300x400/e3f2fd/1565c0?text=${encodeURIComponent(title.substring(0, 15))}`;
+    }
+
+    function displayBooks(books) {
+      const container = document.getElementById('books-container');
+      const loading = document.getElementById('loading');
+
+      loading.style.display = 'none';
+      container.style.display = 'grid';
+
+      books.forEach(book => {
+        const bookElement = document.createElement('div');
+        bookElement.className = 'book-card';
+        
+        bookElement.innerHTML = `
+          <img src="${book.cover}" 
+               alt="${book.title}" 
+               class="book-cover"
+               data-title="${book.title}"
+               onerror="handleImageError(this)"
+               loading="lazy">
+          <div class="book-info">
+            <div class="book-title">${book.title}</div>
+            <div class="book-author">${book.author}</div>
+            <div class="book-rating">★ ${book.rating}</div>
+            <div>Read: ${book.dateRead}</div>
+          </div>
+        `;
+
+        container.appendChild(bookElement);
+      });
+
+      console.log(`✅ Displayed ${books.length} books`);
+    }
+
+    // Try to load CSV, fallback to sample data
+    function loadBooks() {
+      fetch('books.csv')
+        .then(response => {
+          if (!response.ok) throw new Error('CSV not found');
+          return response.text();
+        })
+        .then(csvText => {
+          console.log('📄 CSV loaded successfully');
+          const books = parseCSV(csvText);
+          displayBooks(books.slice(0, 20)); // Show first 20 books
+        })
+        .catch(error => {
+          console.log('⚠️ CSV loading failed, showing sample books:', error);
+          displayBooks(sampleBooks);
+        });
+    }
+
+    function parseCSV(csvText) {
+      const lines = csvText.split('\n');
+      const books = [];
+      
+      for (let i = 1; i < lines.length && books.length < 50; i++) {
+        const line = lines[i];
+        if (!line.includes(',read,')) continue;
+        
+        // Simple parsing for demonstration
+        const parts = line.split(',');
+        if (parts.length < 10) continue;
+        
+        const bookId = parts[0];
+        const title = parts[1].replace(/"/g, '');
+        const author = parts[2].replace(/"/g, '');
+        const rating = parseFloat(parts[8]) || 0;
+        const dateRead = parts[14];
+        
+        if (title && dateRead) {
+          books.push({
+            title: title,
+            author: author,
+            rating: rating,
+            cover: `img-books/${bookId}.jpg`,
+            dateRead: dateRead
+          });
+        }
+      }
+      
+      return books;
+    }
+
+    // Start loading immediately
+    setTimeout(loadBooks, 500);
+  </script>
+</body>
+</html>
