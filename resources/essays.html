@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Essays by Paul Graham - Sumit Kumar</title>
+  <meta content="Curated collection of Paul Graham's influential essays on startups, programming, and entrepreneurship" name="description">
+  <meta content="Paul Graham, essays, startups, Y Combinator, programming, entrepreneurship" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="../assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="../assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+
+  <style>
+    /* Section title styling */
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      color: #2c3e50;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .section-title p {
+      color: #7f8c8d;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* Essay card styling */
+    .essay-card {
+      background: white;
+      border-radius: 15px;
+      padding: 25px;
+      margin-bottom: 25px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border-left: 4px solid #9b59b6;
+    }
+
+    .essay-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .essay-title {
+      color: #2c3e50;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      text-decoration: none;
+    }
+
+    .essay-title:hover {
+      color: #9b59b6;
+      text-decoration: none;
+    }
+
+    .essay-description {
+      color: #7f8c8d;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .essay-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: #bdc3c7;
+    }
+
+    .essay-category {
+      background: #9b59b6;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 12px;
+      font-size: 11px;
+      font-weight: 500;
+    }
+
+    .external-link {
+      color: #9b59b6;
+      font-size: 12px;
+    }
+
+    /* Filter styling */
+    #portfolio-flters {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 35px 0;
+    }
+
+    #portfolio-flters li {
+      cursor: pointer;
+      display: inline-block;
+      padding: 10px 15px;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1;
+      text-transform: uppercase;
+      color: #272829;
+      margin-bottom: 5px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    #portfolio-flters li:hover, #portfolio-flters li.filter-active {
+      color: #149ddd;
+    }
+
+    #portfolio-flters li:last-child {
+      margin-right: 0;
+    }
+
+    .portfolio-container {
+      overflow: hidden;
+    }
+
+    .portfolio-item {
+      margin-bottom: 30px;
+    }
+
+    /* Stats section */
+    .essay-stats {
+      background: #f8f9fa;
+      padding: 30px;
+      border-radius: 15px;
+      margin-top: 50px;
+    }
+
+    .essay-stats h3 {
+      color: #2c3e50;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .essay-stats ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .essay-stats li {
+      padding: 8px 0;
+      border-bottom: 1px solid #ecf0f1;
+    }
+
+    .essay-stats li:last-child {
+      border-bottom: none;
+    }
+
+    .essay-stats i {
+      color: #9b59b6;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="../assets/img/profile-img.png" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="../index.html">Sumit Kumar</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="https://x.com/raas_aal_ghul" target="_blank" class="twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.linkedin.com/in/iamsumitjangra" class="linkedin"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com/sumitsharma14k" class="github"><i class="bx bxl-github"></i></a>
+          <a href="https://www.instagram.com/sumitsharma14k/" class="instagram"><i class="bx bxl-instagram"></i></a>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="../index.html"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="../index.html#about"><i class="bx bx-user"></i> <span>About</span></a></li>
+          <li><a href="../index.html#resume"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+          <li><a href="../index.html#portfolio"><i class="bx bx-book-content"></i> Portfolio</a></li>
+          <li><a href="../travel-blogs/travel-blogs.html"><i class="bx bx-map"></i> Travel Blogs</a></li>
+          <li><a href="../readings/readings.html"><i class="bx bx-book-open"></i> Readings</a></li>
+          <li class="active"><a href="resources.html"><i class="bx bx-server"></i> Resources</a></li>
+          <li><a href="../index.html#contact"><i class="bx bx-envelope"></i> Contact</a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Essays Section ======= -->
+    <section id="essays" class="portfolio">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Essays by Paul Graham</h2>
+          <p>Curated collection of Paul Graham's most influential essays on startups, programming, and entrepreneurship. Paul Graham is a programmer, writer, and investor, best known as the co-founder of Y Combinator, the startup accelerator that has funded companies like Airbnb, Dropbox, and Reddit.</p>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All (16)</li>
+              <li data-filter=".filter-startups">Startups (5)</li>
+              <li data-filter=".filter-programming">Programming (5)</li>
+              <li data-filter=".filter-life">Life & Wisdom (4)</li>
+              <li data-filter=".filter-business">Business (2)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+
+          <!-- Essay 1: How to Do Great Work -->
+          <div class="col-lg-6 portfolio-item filter-life">
+            <div class="essay-card" onclick="window.open('https://www.paulgraham.com/greatwork.html', '_blank')">
+              <h4 class="essay-title">How to Do Great Work</h4>
+              <p class="essay-description">A comprehensive guide on how to do great work in any field. Graham explores the importance of curiosity, working on what you love, and the iterative process of improvement.</p>
+              <div class="essay-meta">
+                <span class="essay-category">Life & Wisdom</span>
+                <span class="external-link"><i class="icofont-external-link"></i> paulgraham.com</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Essay 2: Do Things that Don't Scale -->
+          <div class="col-lg-6 portfolio-item filter-startups">
+            <div class="essay-card" onclick="window.open('https://www.paulgraham.com/ds.html', '_blank')">
+              <h4 class="essay-title">Do Things that Don't Scale</h4>
+              <p class="essay-description">One of the most famous startup essays. Graham argues that founders should focus on manual, unscalable activities in the early stages to understand their users and build a great product.</p>
+              <div class="essay-meta">
+                <span class="essay-category">Startups</span>
+                <span class="external-link"><i class="icofont-external-link"></i> paulgraham.com</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Essay 3: Startup Ideas -->
+          <div class="col-lg-6 portfolio-item filter-startups">
+            <div class="essay-card" onclick="window.open('https://www.paulgraham.com/startupideas.html', '_blank')">
+              <h4 class="essay-title">How to Get Startup Ideas</h4>
+              <p class="essay-description">The best startup ideas come from noticing problems in your own life. Graham explains how to recognize good startup ideas and avoid the common trap of trying to think of startup ideas.</p>
+              <div class="essay-meta">
+                <span class="essay-category">Startups</span>
+                <span class="external-link"><i class="icofont-external-link"></i> paulgraham.com</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Essay 4: Maker's Schedule, Manager's Schedule -->
+          <div class="col-lg-6 portfolio-item filter-programming">
+            <div class="essay-card" onclick="window.open('https://www.paulgraham.com/makersschedule.html', '_blank')">
+              <h4 class="essay-title">Maker's Schedule, Manager's Schedule</h4>
+              <p class="essay-description">A classic essay about the fundamental difference between how makers (programmers, writers) and managers organize their time, and why meetings are so disruptive to creative work.</p>
+              <div class="essay-meta">
+                <span class="essay-category">Programming</span>
+                <span class="external-link"><i class="icofont-external-link"></i> paulgraham.com</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Essay 5: Life is Short -->
+          <div class="col-lg-6 portfolio-item filter-life">
+            <div class="essay-card" onclick="window.open('https://www.paulgraham.com/vb.html', '_blank')">
+              <h4 class="essay-title">Life is Short</h4>
+              <p class="essay-description">A profound reflection on the brevity of life and how to make the most of it. Graham discusses the importance of eliminating bullshit and focusing on what truly matters.</p>
+              <div class="essay-meta">
+                <span class="essay-category">Life & Wisdom</span>
+                <span class="external-link"><i class="icofont-external-link"></i> paulgraham.com</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Essay 6: The Python Paradox -->
+          <div class="col-lg-6 portfolio-item filter-programming">
+            <div class="essay-card" onclick="window.open('https://www.paulgraham.com/pypar.html', '_blank')">
+              <h4 class="essay-title">The Python Paradox</h4>
+              <p class="essay-description">Why using a more powerful programming language like Python can be a competitive advantage for startups, as it attracts better programmers and enables faster development.</p>
+              <div class="essay-meta">
+                <span class="essay-category">Programming</span>
+                <span class="external-link"><i class="icofont-external-link"></i> paulgraham.com</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Essay 7: Mean People Fail -->
+          <div class="col-lg-6 portfolio-item filter-business">
+            <div class="essay-card" onclick="window.open('https://www.paulgraham.com/mean.html', '_blank')">
+              <h4 class="essay-title">Mean People Fail</h4>
+              <p class="essay-description">An exploration of why mean people ultimately fail in business and life. Graham argues that being mean is not just morally wrong, but also strategically counterproductive.</p>
+              <div class="essay-meta">
+                <span class="essay-category">Business</span>
+                <span class="external-link"><i class="icofont-external-link"></i> paulgraham.com</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Essay 8: What You'll Wish You'd Known -->
+          <div class="col-lg-6 portfolio-item filter-life">
+            <div class="essay-card" onclick="window.open('https://www.paulgraham.com/hs.html', '_blank')">
+              <h4 class="essay-title">What You'll Wish You'd Known</h4>
+              <p class="essay-description">Advice to high school students about life, work, and following your curiosity. Graham emphasizes the importance of working on things you're genuinely interested in.</p>
+              <div class="essay-meta">
+                <span class="essay-category">Life & Wisdom</span>
+                <span class="external-link"><i class="icofont-external-link"></i> paulgraham.com</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Essay 9: Beating the Averages -->
+          <div class="col-lg-6 portfolio-item filter-programming">
+            <div class="essay-card" onclick="window.open('https://www.paulgraham.com/avg.html', '_blank')">
+              <h4 class="essay-title">Beating the Averages</h4>
+              <p class="essay-description">How Viaweb (later Yahoo Store) used Lisp to gain a competitive advantage. A classic essay about the power of choosing the right programming language and tools.</p>
+              <div class="essay-meta">
+                <span class="essay-category">Programming</span>
+                <span class="external-link"><i class="icofont-external-link"></i> paulgraham.com</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Essay 10: The Hardest Lessons for Startups to Learn -->
+          <div class="col-lg-6 portfolio-item filter-startups">
+            <div class="essay-card" onclick="window.open('https://www.paulgraham.com/startuplessons.html', '_blank')">
+              <h4 class="essay-title">The Hardest Lessons for Startups to Learn</h4>
+              <p class="essay-description">Key lessons that are difficult for startup founders to accept, including the importance of launching early, listening to users, and being flexible with your initial idea.</p>
+              <div class="essay-meta">
+                <span class="essay-category">Startups</span>
+                <span class="external-link"><i class="icofont-external-link"></i> paulgraham.com</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Essay 11: How to Lose Time and Money -->
+          <div class="col-lg-6 portfolio-item filter-life">
+            <div class="essay-card" onclick="window.open('https://www.paulgraham.com/selfindulgence.html', '_blank')">
+              <h4 class="essay-title">How to Lose Time and Money</h4>
+              <p class="essay-description">An insightful essay about the subtle ways we waste our most valuable resources. Graham explores the psychology behind procrastination and poor financial decisions.</p>
+              <div class="essay-meta">
+                <span class="essay-category">Life & Wisdom</span>
+                <span class="external-link"><i class="icofont-external-link"></i> paulgraham.com</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Essay 12: The Age of the Essay -->
+          <div class="col-lg-6 portfolio-item filter-life">
+            <div class="essay-card" onclick="window.open('https://www.paulgraham.com/essay.html', '_blank')">
+              <h4 class="essay-title">The Age of the Essay</h4>
+              <p class="essay-description">A meta-essay about the essay form itself. Graham discusses how essays are a way of thinking and how the internet has revived this ancient form of writing.</p>
+              <div class="essay-meta">
+                <span class="essay-category">Life & Wisdom</span>
+                <span class="external-link"><i class="icofont-external-link"></i> paulgraham.com</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Essay 13: Why Startups Condense in America -->
+          <div class="col-lg-6 portfolio-item filter-startups">
+            <div class="essay-card" onclick="window.open('https://www.paulgraham.com/america.html', '_blank')">
+              <h4 class="essay-title">Why Startups Condense in America</h4>
+              <p class="essay-description">An analysis of why Silicon Valley became the world's startup capital and what other countries can learn from America's entrepreneurial ecosystem.</p>
+              <div class="essay-meta">
+                <span class="essay-category">Startups</span>
+                <span class="external-link"><i class="icofont-external-link"></i> paulgraham.com</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Essay 14: The Refragmentation -->
+          <div class="col-lg-6 portfolio-item filter-business">
+            <div class="essay-card" onclick="window.open('https://www.paulgraham.com/re.html', '_blank')">
+              <h4 class="essay-title">The Refragmentation</h4>
+              <p class="essay-description">How the internet is breaking up the mass media and returning us to a more fragmented, diverse information landscape. A prescient essay about the future of media.</p>
+              <div class="essay-meta">
+                <span class="essay-category">Business</span>
+                <span class="external-link"><i class="icofont-external-link"></i> paulgraham.com</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Essay 15: Hackers and Painters -->
+          <div class="col-lg-6 portfolio-item filter-programming">
+            <div class="essay-card" onclick="window.open('https://www.paulgraham.com/hp.html', '_blank')">
+              <h4 class="essay-title">Hackers and Painters</h4>
+              <p class="essay-description">A comparison between programming and painting, arguing that both are forms of creative expression. This essay became the title of Graham's famous book.</p>
+              <div class="essay-meta">
+                <span class="essay-category">Programming</span>
+                <span class="external-link"><i class="icofont-external-link"></i> paulgraham.com</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Essay 16: Having Kids -->
+          <div class="col-lg-6 portfolio-item filter-life">
+            <div class="essay-card" onclick="window.open('https://www.paulgraham.com/kids.html', '_blank')">
+              <h4 class="essay-title">Having Kids</h4>
+              <p class="essay-description">A personal reflection on parenthood and how having children changes your perspective on life, work, and what truly matters.</p>
+              <div class="essay-meta">
+                <span class="essay-category">Life & Wisdom</span>
+                <span class="external-link"><i class="icofont-external-link"></i> paulgraham.com</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Essays Stats Section -->
+        <div class="row" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-8">
+            <div class="essay-stats">
+              <h3>About Paul Graham's Essays</h3>
+              <div class="essay-stats-content">
+                <ul>
+                  <li><i class="icofont-check-circled"></i> <span><strong>Total Essays:</strong> 16+ influential essays on startups, programming, and life</span></li>
+                  <li><i class="icofont-check-circled"></i> <span><strong>Y Combinator:</strong> Co-founder of the world's most successful startup accelerator</span></li>
+                  <li><i class="icofont-check-circled"></i> <span><strong>Impact:</strong> Essays have influenced thousands of entrepreneurs and programmers worldwide</span></li>
+                  <li><i class="icofont-check-circled"></i> <span><strong>Writing Style:</strong> Clear, thoughtful, and backed by real-world experience</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="essay-stats">
+              <h3>Categories</h3>
+              <div class="essay-stats-content">
+                <ul>
+                  <li><i class="icofont-rocket"></i> <span><strong>Startups:</strong> Practical advice for founders</span></li>
+                  <li><i class="icofont-code"></i> <span><strong>Programming:</strong> Technical insights and philosophy</span></li>
+                  <li><i class="icofont-heart"></i> <span><strong>Life & Wisdom:</strong> Reflections on living well</span></li>
+                  <li><i class="icofont-business-man"></i> <span><strong>Business:</strong> Industry analysis and trends</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Essays Section -->
+
+  </main><!-- End #main -->
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/jquery/jquery.min.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+  <script src="../assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="../assets/vendor/counterup/counterup.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/venobox/venobox.min.js"></script>
+  <script src="../assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="../assets/vendor/typed.js/typed.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+
+</body>
+</html>
