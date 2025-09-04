@@ -48,52 +48,94 @@
       line-height: 1.6;
     }
 
-    /* Essay card styling */
-    .essay-card {
-      background: white;
-      border-radius: 15px;
-      padding: 25px;
-      margin-bottom: 25px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-      transition: all 0.3s ease;
+    /* Standard card styling for entire website */
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
       cursor: pointer;
-      border-left: 4px solid #9b59b6;
+      height: 450px;
+      display: flex;
+      flex-direction: column;
     }
 
-    .essay-card:hover {
+    .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     }
 
-    .essay-title {
-      color: #2c3e50;
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 10px;
-      text-decoration: none;
+    .resource-icon {
+      width: 100%;
+      height: 270px;
+      background: #f8f9fa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px 10px 0 0;
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
     }
 
-    .essay-title:hover {
+    .resource-icon i {
+      font-size: 80px;
       color: #9b59b6;
-      text-decoration: none;
+      transition: transform 0.3s ease;
     }
 
-    .essay-description {
-      color: #7f8c8d;
-      font-size: 14px;
-      line-height: 1.6;
-      margin-bottom: 15px;
+    .card:hover .resource-icon {
+      transform: scale(1.05);
     }
 
-    .essay-meta {
+    .card:hover .resource-icon i {
+      transform: scale(1.1);
+    }
+
+    .card-info {
+      padding: 18px;
+      height: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-shrink: 0;
+    }
+
+    .card-info h4 {
+      color: #173b6c;
+      margin-bottom: 8px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 1.3;
+      height: 42px;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+
+    .card-info p {
+      color: #666;
+      font-size: 13px;
+      margin-bottom: 12px;
+      line-height: 1.4;
+      height: 75px;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+    }
+
+    .card-meta {
       display: flex;
       justify-content: space-between;
       align-items: center;
       font-size: 12px;
-      color: #bdc3c7;
+      color: #999;
+      height: 24px;
     }
 
-    .essay-category {
+    .card-category {
       background: #9b59b6;
       color: white;
       padding: 4px 8px;
@@ -102,9 +144,20 @@
       font-weight: 500;
     }
 
-    .external-link {
-      color: #9b59b6;
-      font-size: 12px;
+    .card-category.startups {
+      background: #e74c3c;
+    }
+
+    .card-category.programming {
+      background: #27ae60;
+    }
+
+    .card-category.life {
+      background: #3498db;
+    }
+
+    .card-category.business {
+      background: #f39c12;
     }
 
     /* Filter styling */
@@ -237,97 +290,137 @@
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
 
           <!-- Essay 1: How to Do Great Work -->
-          <div class="col-lg-6 portfolio-item filter-life">
-            <div class="essay-card" onclick="window.open('https://www.paulgraham.com/greatwork.html', '_blank')">
-              <h4 class="essay-title">How to Do Great Work</h4>
-              <p class="essay-description">A comprehensive guide on how to do great work in any field. Graham explores the importance of curiosity, working on what you love, and the iterative process of improvement.</p>
-              <div class="essay-meta">
-                <span class="essay-category">Life & Wisdom</span>
-                <span class="external-link"><i class="icofont-external-link"></i> paulgraham.com</span>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-life">
+            <div class="card" onclick="window.open('https://www.paulgraham.com/greatwork.html', '_blank')">
+              <div class="resource-icon">
+                <i class="icofont-file-text"></i>
+              </div>
+              <div class="card-info">
+                <h4>How to Do Great Work</h4>
+                <p>A comprehensive guide on how to do great work in any field. Graham explores the importance of curiosity, working on what you love, and the iterative process of improvement.</p>
+                <div class="card-meta">
+                  <span class="card-category life">Life & Wisdom</span>
+                  <span>paulgraham.com</span>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- Essay 2: Do Things that Don't Scale -->
-          <div class="col-lg-6 portfolio-item filter-startups">
-            <div class="essay-card" onclick="window.open('https://www.paulgraham.com/ds.html', '_blank')">
-              <h4 class="essay-title">Do Things that Don't Scale</h4>
-              <p class="essay-description">One of the most famous startup essays. Graham argues that founders should focus on manual, unscalable activities in the early stages to understand their users and build a great product.</p>
-              <div class="essay-meta">
-                <span class="essay-category">Startups</span>
-                <span class="external-link"><i class="icofont-external-link"></i> paulgraham.com</span>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-startups">
+            <div class="card" onclick="window.open('https://www.paulgraham.com/ds.html', '_blank')">
+              <div class="resource-icon">
+                <i class="icofont-rocket"></i>
+              </div>
+              <div class="card-info">
+                <h4>Do Things that Don't Scale</h4>
+                <p>One of the most famous startup essays. Graham argues that founders should focus on manual, unscalable activities in the early stages to understand their users and build a great product.</p>
+                <div class="card-meta">
+                  <span class="card-category startups">Startups</span>
+                  <span>paulgraham.com</span>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- Essay 3: Startup Ideas -->
-          <div class="col-lg-6 portfolio-item filter-startups">
-            <div class="essay-card" onclick="window.open('https://www.paulgraham.com/startupideas.html', '_blank')">
-              <h4 class="essay-title">How to Get Startup Ideas</h4>
-              <p class="essay-description">The best startup ideas come from noticing problems in your own life. Graham explains how to recognize good startup ideas and avoid the common trap of trying to think of startup ideas.</p>
-              <div class="essay-meta">
-                <span class="essay-category">Startups</span>
-                <span class="external-link"><i class="icofont-external-link"></i> paulgraham.com</span>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-startups">
+            <div class="card" onclick="window.open('https://www.paulgraham.com/startupideas.html', '_blank')">
+              <div class="resource-icon">
+                <i class="icofont-bulb"></i>
+              </div>
+              <div class="card-info">
+                <h4>How to Get Startup Ideas</h4>
+                <p>The best startup ideas come from noticing problems in your own life. Graham explains how to recognize good startup ideas and avoid the common trap of trying to think of startup ideas.</p>
+                <div class="card-meta">
+                  <span class="card-category startups">Startups</span>
+                  <span>paulgraham.com</span>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- Essay 4: Maker's Schedule, Manager's Schedule -->
-          <div class="col-lg-6 portfolio-item filter-programming">
-            <div class="essay-card" onclick="window.open('https://www.paulgraham.com/makersschedule.html', '_blank')">
-              <h4 class="essay-title">Maker's Schedule, Manager's Schedule</h4>
-              <p class="essay-description">A classic essay about the fundamental difference between how makers (programmers, writers) and managers organize their time, and why meetings are so disruptive to creative work.</p>
-              <div class="essay-meta">
-                <span class="essay-category">Programming</span>
-                <span class="external-link"><i class="icofont-external-link"></i> paulgraham.com</span>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-programming">
+            <div class="card" onclick="window.open('https://www.paulgraham.com/makersschedule.html', '_blank')">
+              <div class="resource-icon">
+                <i class="icofont-clock-time"></i>
+              </div>
+              <div class="card-info">
+                <h4>Maker's Schedule, Manager's Schedule</h4>
+                <p>A classic essay about the fundamental difference between how makers (programmers, writers) and managers organize their time, and why meetings are so disruptive to creative work.</p>
+                <div class="card-meta">
+                  <span class="card-category programming">Programming</span>
+                  <span>paulgraham.com</span>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- Essay 5: Life is Short -->
-          <div class="col-lg-6 portfolio-item filter-life">
-            <div class="essay-card" onclick="window.open('https://www.paulgraham.com/vb.html', '_blank')">
-              <h4 class="essay-title">Life is Short</h4>
-              <p class="essay-description">A profound reflection on the brevity of life and how to make the most of it. Graham discusses the importance of eliminating bullshit and focusing on what truly matters.</p>
-              <div class="essay-meta">
-                <span class="essay-category">Life & Wisdom</span>
-                <span class="external-link"><i class="icofont-external-link"></i> paulgraham.com</span>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-life">
+            <div class="card" onclick="window.open('https://www.paulgraham.com/vb.html', '_blank')">
+              <div class="resource-icon">
+                <i class="icofont-heart"></i>
+              </div>
+              <div class="card-info">
+                <h4>Life is Short</h4>
+                <p>A profound reflection on the brevity of life and how to make the most of it. Graham discusses the importance of eliminating bullshit and focusing on what truly matters.</p>
+                <div class="card-meta">
+                  <span class="card-category life">Life & Wisdom</span>
+                  <span>paulgraham.com</span>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- Essay 6: The Python Paradox -->
-          <div class="col-lg-6 portfolio-item filter-programming">
-            <div class="essay-card" onclick="window.open('https://www.paulgraham.com/pypar.html', '_blank')">
-              <h4 class="essay-title">The Python Paradox</h4>
-              <p class="essay-description">Why using a more powerful programming language like Python can be a competitive advantage for startups, as it attracts better programmers and enables faster development.</p>
-              <div class="essay-meta">
-                <span class="essay-category">Programming</span>
-                <span class="external-link"><i class="icofont-external-link"></i> paulgraham.com</span>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-programming">
+            <div class="card" onclick="window.open('https://www.paulgraham.com/pypar.html', '_blank')">
+              <div class="resource-icon">
+                <i class="icofont-code"></i>
+              </div>
+              <div class="card-info">
+                <h4>The Python Paradox</h4>
+                <p>Why using a more powerful programming language like Python can be a competitive advantage for startups, as it attracts better programmers and enables faster development.</p>
+                <div class="card-meta">
+                  <span class="card-category programming">Programming</span>
+                  <span>paulgraham.com</span>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- Essay 7: Mean People Fail -->
-          <div class="col-lg-6 portfolio-item filter-business">
-            <div class="essay-card" onclick="window.open('https://www.paulgraham.com/mean.html', '_blank')">
-              <h4 class="essay-title">Mean People Fail</h4>
-              <p class="essay-description">An exploration of why mean people ultimately fail in business and life. Graham argues that being mean is not just morally wrong, but also strategically counterproductive.</p>
-              <div class="essay-meta">
-                <span class="essay-category">Business</span>
-                <span class="external-link"><i class="icofont-external-link"></i> paulgraham.com</span>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-business">
+            <div class="card" onclick="window.open('https://www.paulgraham.com/mean.html', '_blank')">
+              <div class="resource-icon">
+                <i class="icofont-business-man"></i>
+              </div>
+              <div class="card-info">
+                <h4>Mean People Fail</h4>
+                <p>An exploration of why mean people ultimately fail in business and life. Graham argues that being mean is not just morally wrong, but also strategically counterproductive.</p>
+                <div class="card-meta">
+                  <span class="card-category business">Business</span>
+                  <span>paulgraham.com</span>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- Essay 8: What You'll Wish You'd Known -->
-          <div class="col-lg-6 portfolio-item filter-life">
-            <div class="essay-card" onclick="window.open('https://www.paulgraham.com/hs.html', '_blank')">
-              <h4 class="essay-title">What You'll Wish You'd Known</h4>
-              <p class="essay-description">Advice to high school students about life, work, and following your curiosity. Graham emphasizes the importance of working on things you're genuinely interested in.</p>
-              <div class="essay-meta">
-                <span class="essay-category">Life & Wisdom</span>
-                <span class="external-link"><i class="icofont-external-link"></i> paulgraham.com</span>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-life">
+            <div class="card" onclick="window.open('https://www.paulgraham.com/hs.html', '_blank')">
+              <div class="resource-icon">
+                <i class="icofont-graduate"></i>
+              </div>
+              <div class="card-info">
+                <h4>What You'll Wish You'd Known</h4>
+                <p>Advice to high school students about life, work, and following your curiosity. Graham emphasizes the importance of working on things you're genuinely interested in.</p>
+                <div class="card-meta">
+                  <span class="card-category life">Life & Wisdom</span>
+                  <span>paulgraham.com</span>
+                </div>
               </div>
             </div>
           </div>
